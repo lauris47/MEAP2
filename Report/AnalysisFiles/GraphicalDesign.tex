@@ -1,13 +1,32 @@
 \section{Graphical Design}
-Two of the things people often complaint about in apps is a confusing interface design and poor navigation. (Source) This can be prevented by using design patterns. 
-First, let's look at navigation. There are two ways to make navigating through an app easier. Persistent and transient. Persistent navigation is your list menus and your tab menus or menu structures if you will. Transient navigation has to be revealed through a tab action or the likes. 
+Two of the things people often complaint about in applications is a confusing interface design and poor navigation. \cite{Pattern} This can be prevented by using design patterns. 
+First, let's look at navigation. There are two ways to make navigating through an app easier. Persistent and transient. Persistent navigation is your list menus and your tab menus or menu structures if you will. Transient navigation has to be revealed through a tab action or the likes.\cite{Pattern}
 Does the user need to see the menu at all times? If not, you can use an off-canvas solution like the side bar. 
-It has become more and more popular to use off canvas methods. This helps the app hold more information but without being confusing e.g. If all your information has to go on one page. 
-You don't want to put too much text into one page or have a simple form take up several pages. A sign in for example should only be one page. A way to not get an over lapping look is by using vertical labels instead of horizontal. Or you could have the horizontal labels where the text disappears as soon as the user starts typing, but you risk that the user forgets what they should fill in. 
+It has become more and more popular to use off canvas methods. \cite{Pattern} This helps the app hold more information but without being confusing e.g. If all your information has to go on one page. 
+You don't want to put too much text into one page or have a simple form take up several pages. A sign in for example should only be one page. A way to not get an over lapping look is by using vertical labels instead of horizontal. \cite{Pattern} Or you could have the horizontal labels where the text disappears as soon as the user starts typing, but you risk that the user forgets what they should fill in.\cite{Pattern} 
 Some apps, like Instagram, shows the "sign in" and "sign up" option all the way through the tutorial. This also insures that the user do not have to go through a whole tutorial if they don’t need it. 
-Another important form is the "search" form. This should be very short. It is a good idea to offer a filter option like "saved searches". There are several kinds of searches. Explicit search is the most standard search option and is pretty straight forward. But you can still give it a little extra. E.g. When the user chooses the search bar but haven't typed anything in yet you could give them some options in a list e.g. have a "scan" option at the top, latest searches, saved searches etc. 
-Implicit search will give the user something they didn't search for and what they might not know they needed. E.g. Search for coupons when you enter your local grocery store and give an alert if there is anything useful. This will enhance the user experience as well. 
-Scoped searches is searching for something more specific. You can choose to search in different categories to minimize the results and not get a result of 1500 different chairs if you are looking for one specific chair. 
-Lastly there is the dynamic search or dynamic filtering. This is used to minimize choices in set lists like in music library. This is however only good with small data sets.
-For a good GUI experience the app should be as intuitive as possible. If the user can pick it right up and start using it without having to go through tutorials or reading instructions then you are off to a great start (http://www.andysowards.com/blog/2012/how-to-create-gui-graphical-user-interface-experiences/)
-There are many more patterns and anti-patterns to discover.  
+Another important form is the "search" form. This should be very short. It is a good idea to offer a filter option like "saved searches". There are several kinds of searches. 
+
+Explicit search is the most standard search option and is pretty straight forward. But you can still give it a little extra. E.g. When the user chooses the search bar but haven't typed anything in yet you could give them some options in a list e.g. have a "scan" option at the top, latest searches, saved searches etc. \cite{Pattern}
+
+Implicit search will give the user something they didn't search for and what they might not know they needed. E.g. Search for coupons when you enter your local grocery store and give an alert if there is anything useful. This will enhance the user experience as well. \cite{Pattern}
+
+Scoped searches is searching for something more specific. You can choose to search in different categories to minimize the results and not get a result of 1500 different chairs if you are looking for one specific chair. \cite{Pattern}
+
+Lastly there is the dynamic search or dynamic filtering. This is used to minimize choices in set lists like in music library. This is however only good with small data sets.\cite{Pattern}
+
+There are many more patterns and anti-patterns to discover. \♦cite{Pattern}
+
+Keeping these patterns in mind there are still many things to consider. 
+First of all, remember the size of the screen that you are designing for. Avoid using big scaled photos and put to much information at one page. This will make it look cluttered and make it less intuitive. \cite{Graphic}
+In short, make everything as clean and simple as possible. 
+
+When designing your layout it is, once again, key to keep everything simple and streamlined. 
+Follow the general rules, left-to-right and top-to-bottom. Make sure the most important feature is in the top left corner where the user will look first.\cite{Graphic}
+
+Be careful when choosing a font type. You cant control the devices fonts and thus try to pick an common type font.  \cite{Graphic} To make the text easy to read make sure that the contrast between text and background is present. Either black and white or a light coloured background with dark text. \cite{Graphic}
+
+Last but not least; colors. Make sure that the colors are bright enough and that the contrast is sufficient since the weather can affect the UX. \cite{Graphic}
+
+
+
