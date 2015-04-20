@@ -1,0 +1,48 @@
+\begin{thebibliography}{}
+
+\bibitem[Bonneville, 2010]{TypeComb}
+Bonneville, D. (2010).
+\newblock Best practices of combining typefaces.
+\newblock \url{
+  http://www.smashingmagazine.com/2010/11/04/best-practices-of-combining-typefaces
+  }.
+
+\bibitem[Ciotti, 2013]{ColorMeaning}
+Ciotti, G. (2013).
+\newblock The psychology of colour in marketing and branding.
+
+\bibitem[Hampton-Smith, 2014]{Colour}
+Hampton-Smith, S. (2014).
+\newblock How to master colour theory.
+\newblock \url{ http://www.creativebloq.com/colour/colour-theory-11121290 }.
+
+\bibitem[Mayer, 2010]{Font}
+Mayer, D. (2010).
+\newblock What font should i use?: Five principles for choosing and using
+  typefaces.
+\newblock \url{
+  http://www.smashingmagazine.com/2010/12/14/what-font-should-i-use-five-principles-for-choosing-and-using-typefaces
+  }.
+
+\bibitem[McGlurg-Genevese, 2005]{DesignPrinciple}
+McGlurg-Genevese, J.~D. (2005).
+\newblock The principles of design.
+\newblock \url{ http://www.digital-web.com/articles/principles_of_design }.
+
+\bibitem[Neil, 2014]{Pattern}
+Neil, T. (2014).
+\newblock {\em Mobile Design Pattern Gallery}.
+\newblock O'Reilly Media, Inc., 2nd edition.
+\newblock ISBN:8349857349687.
+
+\bibitem[Nielsen and Budui, 2015]{MobileUsability}
+Nielsen, J. and Budui, R. (2015).
+\newblock {\em Mobile Usability}.
+\newblock The Nielsen Norman Group.
+\newblock ISBN:978-0-321-88448-0.
+
+\bibitem[Sardo, 2009]{Sardo}
+Sardo, G. (2009).
+\newblock Building mobile user experiences.
+
+\end{thebibliography}

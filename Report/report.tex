@@ -44,17 +44,6 @@ CHANGE THIS BEFORE HANDIN}
 \DeclareMathOperator{\C}{\mathbb{C}}
 \DeclareMathOperator{\R}{\mathbb{R}}
 \newcommand{\nn}{\nonumber}
-% SI Units
-	%\usepackage[output-decimal-marker={,}]{siunitx}		%http://mirrors.dotsrc.org/ctan/macros/latex/begincontrib/siunitx/siunitx.pdf
-	%\sisetup{unitsep= \cdot }
-
-% For Chemistry
-	%\usepackage{chemscheme}		% http://ctan.org/pkg/chemscheme
-	%\usepackage{chemsym}		% http://ctan.org/pkg/chemsym
-	%\usepackage{mhchem}			% http://mirrors.dotsrc.org/ctan/
-	%macros/latex/contrib/chemstyle/chemstyle.pdf
-	%\DeclareSIUnit\Molar{\textsc{m}}
-%-----------Scientific and mathematical packages end--------------
 
 % Non-default fonts - has to come _after_ some of the mathematical packages
 \usepackage{pxfonts}
@@ -63,13 +52,13 @@ CHANGE THIS BEFORE HANDIN}
 \usepackage[left=2.0cm, right=1.5cm]{geometry}
 
 % Hyperref
-\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black]{hyperref}
 %\usepackage[hidelinks]{hyperref}  
 \hypersetup{pdftitle={\doctitle}} 
 \hypersetup{pdfsubject={\docsubject}}
 \hypersetup{pdfauthor={\docauthor}}
 \usepackage{varioref}
-
+%\usepackage{url}
 % Setspace
 \usepackage{setspace}
 \onehalfspacing
@@ -106,6 +95,9 @@ CHANGE THIS BEFORE HANDIN}
 \definecolor{gray75}{gray}{0.75}
 \newcommand{\hsp}{\hspace{20pt}}
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+
+
+
 \begin{document}
 
 \begin{titlepage}
@@ -126,6 +118,9 @@ CHANGE THIS BEFORE HANDIN}
 \include{Intro}
 \input{Analysis}
 
-\include{LiteratureList}
+\newpage
+\bibliographystyle{apalike}
+\bibliography{LiteratureList} 
+
 \end{document}
 
