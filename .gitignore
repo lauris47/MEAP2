@@ -7,3 +7,5 @@
 Report/report.pdf
 *.pdf
 *.pdf
+*.bbl
+*.blg
