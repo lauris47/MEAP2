@@ -1,8 +1,13 @@
-\section{Interaction Design}
-\todo{needs intro ease-in}
+\section{Interaction Methods in 3d Environment}
+There are different ways of conveying 3d environment within the smart device spectrum (in this case - smartphones and tablets). It is important that the aim of the project is established before moving onto conclusions on which approach to take. Since the project revolves around orientation in 3-dimensional environment, \todo{Double-check this part please, because not sure if it's right.} irrelevant approaches will be eliminated right away.
+
 A very important part when developing the application to fit a pleasurable user experience is to make sure that it works as flawless as possible, and there are no misinterpretations when using the product. For the product that is going to be developed, the “traditional” interaction methods do not cover the functionalities that are needed to cover our initial concept needs. To assure that the alternative interaction is integrated in a convenient manner, knowledge about different sensors and possible combination of two or more to make more intelligent outcomes should be established.
+
+It is also important to note that the proportions will differ from reality because of the device size. This project is aimed at visual representation of a rather realistic environment, and that will be taken into account during the implementation. \todo{also not sure if this part is necessary here}
+
 \subsection{Traditional interaction}
-As technology evolves, new ways of interacting with computational devices are constantly built. With that, people’s needs also change. The transition from the classical buttons on a cellphone to a touchscreen has made new ways of interaction possible - the delimitation of physical buttons made it available to have any customized graphical interfaces on the screen possible. This made life easier for casual tasks - like zooming a photo using two fingers as multi-touch input, which is much more intuitive than the classical button alternative.
+As technology evolves, new ways of interacting with computational devices are constantly built. With that, people’s needs also change, the people adapt to new ways of communication with technology \cite{Greenfield} \todo{for some reason cite doesn't work} %http://www.dailymail.co.uk/sciencetech/article-565207/Modern-technology-changing-way-brains-work-says-neuroscientist.html
+. The transition from the classical buttons on a cellphone to a touchscreen has made new ways of interaction possible - the delimitation of physical buttons made it available to have any customized graphical interfaces on the screen possible. This made life easier for casual tasks - like zooming a photo using two fingers as multitouch input (which allows registration of multiple points of contact simultaneously), which is much more intuitive than the classical button alternative.
 Soon enough non-traditional sensors started finding their place in smartphones - the implementation of these sensors in the smartphone allowed new forms of interaction, such as video calling, flashlight and screen orientation, followed by more interesting unusual uses - application developers started making instrument tuners (GStrings), barcode scanners (Barcode Scanner), radiation detectors (GammaPix), pulse detectors (Instant Heart Rate), light intensity meters (Light Meter) and countless other applications that use the sensors to their favour in a non-traditional manner. However, we will only focus on sensors that support our problem area, which points to the ones that can work with 3d environment - the relevant ones for this project are the gyroscope, accelerometer and magnetometer. In section \ref{sensors} possible sensors and combinations of them that are considered to be used to achieve a functioning prototype will be discussed. %\begin{itemize}
 %\item mention immersion
 %\item if sensors are used well - sharpness achieved. beneficial for imitating %feeling of reality
@@ -10,18 +15,15 @@ Soon enough non-traditional sensors started finding their place in smartphones -
 %\item what sensors we are going to use and why
 %\end{itemize}
 
-\subsection{Mobile Usability}
-According to the Journal of Interaction Science (http://www.journalofinteractionscience.com/content/1/1/1) \todo{needs to be made into a reference}, mobile usability is measured by these three attributes: effectiveness, efficiency and satisfaction. These attributes may not always be achieved with traditional interaction methods – because they are limited to visual feedback dependent on touch interaction with the device (which, for instance, will not be able to utilize a sense of 3d placement of the device in its environment). It has also been shown that it might conflict with the users interaction, if the user has limited mobility (e.g. has a case of Tetraplegia) – it will cause higher error rates with the interaction (especially with complex applications that have smaller buttons). This project will focus on utilizing the use of non-traditional interaction methods to focus on enhancing user experience by using interactional input means that are not considered traditional.
-
-As we are aiming for a better user experience, and one of the factors is the previous experience the user has had involving the task, a proper approach would be to guide the user through the switching process between interaction methods. E.g. if a task would normally be performed with traditional gestures, the user should be intuitively guided on how to do it in an alternative way. On the other hand, users that have no prior experience with the task or similar apps, should be able to discover what they need easily. Although, context of use is not considered often (according to the same article, less than 10\% of the taken studies took it into consideration), as opposed to previously made point.
 
 \subsection{Sensors} \label{sensors}
 
-As it has been established so far there are three main sensors that can support orientation in 3D environment possible. These sensors are accelerometer, gyroscope and magnetometer. Throughout this part text it will be determined weather these sensors are in fact useful to this project's case and if so then to what extent.
+As it has been established so far there are three main sensors that can support orientation in 3D environment possible. These sensors are accelerometer, gyroscope and magnetometer. In the following section it will be determined whether these sensors are in fact useful to this project's case and if so - to what extent.
 
-\subsubsection*{The Gyroscope}
-A gyroscope is a device that uses Earth's gravity to help determine orientation. Its design consists of a freely-rotating disk called a rotor, mounted onto a spinning axis in the center of a larger and more stable wheel. As the axis turns, the rotor remains stationary to indicate the central gravitational pull, and thus which way is “down.”(Ryan Goodrich, 2013). Gyroscope, in comparison to magnetometer and accelerometer, is the physically largest and most expensive sensor, so the possible limitations in the smart devices in-built Gyroscopes have to be considered. Gyroscope is one of if not the most important sensor to establish navigation in 3D environment. This sensor is relevant to the project, because it controls speed of movement in 3D environment. 
-%http://issuu.com/eeweb/docs/01-2015_embedded_developer_2_pages/30?e=7607911/11184384
+\subsubsection*{Gyroscope, Accelerometer and Magnetometer}
+Gyroscope, Accelerometer and Magnetometer are the three sensors that most of the newer smartphones have \cite{AndroidDevelopers} \todo{reference error again} that can measure orientations on X, Y and Z axis, allowing the apps to calculate placement of the device in the 3D environment.
+
+Gyroscope can be used to help determine orientation using gravity. Since it detects rotation in 3-dimensional space, it can be used in favor of this project to convey the rotation that is in a way similar to the one that is natural - eyesight. Gyroscope, in comparison to magnetometer and accelerometer, is the physically largest and most expensive sensor, so the possible limitations in the smart devices in-built Gyroscopes have to be considered.
 
 \begin{figure}[H]
 \centering
@@ -29,11 +31,19 @@ A gyroscope is a device that uses Earth's gravity to help determine orientation.
 \caption{iPhone game using a gyroscope sensor}
 \end{figure}
 
+Gyroscope cannot detect the direction the phone is facing. Luckily, the accelerometer can support it to give the impression of the environment representation in 3-dimensional space - this helps to stabilize the view angle to represent real world by giving the position perpendicular to the Earth's surface. In other words, it would eliminate wrong position starting point - moving forward horizontally in reality while in the virtual environment it goes upside down could cause cluster. Accelerometer, along with other sensors is commonly used in the augmented reality concepts (Yelp Monocle, Google Ingress, SpecTrek etc).
 
-The next sensor is accelerometer. Accelerometer is capable of detecting the force and the movement in a three-dimensional space. This feature is most commonly used to adjust the display to match the position that the device is held in by the user (Chong, 2015). If the accelerometer is rotated at the center of the system, however, it will not detect the movement. Accelerometer, along with other sensors is commonly used in the augmented reality concepts.
+The last sensor that is able to collect 3-dimensional data is the magnetometer. It is typically used to measure the absolute position of 3-dimensional orientation in terms of Geographical placement on earth, which is irrelevant for this project.  Additionally, magnetic interference can disturb its flow, which may lead to inaccurate results. In future development of the project, an online feature with more precise positioning in relation to other users could be considered. Alternatively, the magnetometer can be used to support the gyroscope and accelerometer with positioning, if they lack precision axis-wise. If there are no problems with accelerometer and gyroscope axis measurement i.e. blind spots that these two sensors can not recognize - implementation of the magnetometer is not necessary. 
 
-\subsubsection*{The Magnetometer}
-The magnetometer can be combined with an accelerometer (to complement in measuring the gravity) to get the input of the 3d orientation the phone is being held in. It can be useful in determining the absolute orientation of directions in the North/East/South/West plane. The issue with the magnetometer is that magnetic interference can disturb its flow, making the device output unpredictable results.
+
+%future development: 
+
+
+%all the info can be found @ http://diydrones.com/profiles/blogs/faq-whats-the-difference
+
+%http://issuu.com/eeweb/docs/01-2015_embedded_developer_2_pages/30?e=7607911/11184384
+
+
 %http://www.sensorplatforms.com/understanding-smart-phone-sensor-performance-magnetometer-2/
 
 \begin{figure}[H]
@@ -42,14 +52,10 @@ The magnetometer can be combined with an accelerometer (to complement in measuri
 \caption{a simple compass app that establishes the magnetometer sensor}
 \end{figure}
 
-\subsubsection*{Combined Sensors}
-Combining accelerometer and gyroscope allows measurement of 6 orientations on X, Y and Z axis, allowing the apps to calculate placement of the device in the 3D environment more accurately.
-It is also possible to do a 9 axis approach where to these two sensors can be added a third one - the magnetometer. In this case it is unnecessary because magnetometer, as mentioned earlier, can be affected by magnetic interference and it is also commonly used to determine cardinal directions -  a compass. For this project such feature is not considered necessary and therefore excluded. This leaves us with 6-axis approach.
 
-\subsubsection*{9-axis approach(delete when section above is approved)}
-Accelerometer, magnetometer, gyroscope could be all combined together for even more valuable user experience. For instance - enabling an online feature with more precise positioning in relation to other users could be considered. The data gathered from accelerometer, magnetometer and gyroscope can accurately position the artefact in the world, including the changes in position and rotation. On top of that, multiple sensors could fill individual sensors blind spots. 
 %http://issuu.com/eeweb/docs/01-2015_embedded_developer_2_pages/30?e=7607911/11184384
 %picture!!!
+
 
 \begin{figure}[H]
 \begin{subfigure}{.5\textwidth}
