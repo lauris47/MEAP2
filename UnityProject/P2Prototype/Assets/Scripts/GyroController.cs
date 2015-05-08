@@ -1,11 +1,6 @@
-﻿// ***********************************************************
-// Written by Heyworks Unity Studio http://unity.heyworks.com/
-// ***********************************************************
-using UnityEngine;
+﻿using UnityEngine;
 
-/// <summary>
-/// Gyroscope controller that works with any device orientation.
-/// </summary>
+
 public class GyroController : MonoBehaviour {
 
     private bool gyroEnabled = true;
@@ -22,6 +17,7 @@ public class GyroController : MonoBehaviour {
     private Quaternion baseOrientationRotationFix = Quaternion.identity;
 
     private Quaternion referanceRotation = Quaternion.identity;
+    
     private bool debug = false;
 
 
@@ -80,9 +76,7 @@ public class GyroController : MonoBehaviour {
 
 
 
-    /// <summary>
-    /// Attaches gyro controller to the transform.
-    /// </summary>
+    // Attaches gyro controller to the transform.
     private void AttachGyro() {
         gyroEnabled = true;
         ResetBaseOrientation();
@@ -91,17 +85,14 @@ public class GyroController : MonoBehaviour {
         RecalculateReferenceRotation();
     }
 
-    /// <summary>
-    /// Detaches gyro controller from the transform
-    /// </summary>
+    
+    // Detaches gyro controller from the transform
     private void DetachGyro() {
         gyroEnabled = false;
     }
 
 
-    /// <summary>
-    /// Update the gyro calibration.
-    /// </summary>
+    // Update the gyro calibration.
     private void UpdateCalibration(bool onlyHorizontal) {
         if (onlyHorizontal) {
             var fw = (Input.gyro.attitude) * (-Vector3.forward);
@@ -118,12 +109,7 @@ public class GyroController : MonoBehaviour {
         }
     }
 
-    /// <summary>
-    /// Update the camera base rotation.
-    /// </summary>
-    /// <param name='onlyHorizontal'>
-    /// Only y rotation.
-    /// </param>
+    // Update the camera base rotation.
     private void UpdateCameraBaseRotation(bool onlyHorizontal) {
         if (onlyHorizontal) {
             var fw = transform.forward;
@@ -140,55 +126,24 @@ public class GyroController : MonoBehaviour {
         }
     }
 
-    /// <summary>
-    /// Converts the rotation from right handed to left handed.
-    /// </summary>
-    /// <returns>
-    /// The result rotation.
-    /// </returns>
-    /// <param name='q'>
-    /// The rotation to convert.
-    /// </param>
+    
+    // Converts the rotation from right handed to left handed.
     private static Quaternion ConvertRotation(Quaternion q) {
         return new Quaternion(q.x, q.y, -q.z, -q.w);
     }
 
-    /// <summary>
-    /// Gets the rot fix for different orientations.
-    /// </summary>
-    /// <returns>
-    /// The rot fix.
-    /// </returns>
+    // Gets the rot fix for different orientations.
     private Quaternion GetRotFix() {
-#if UNITY_3_5
-		if (Screen.orientation == ScreenOrientation.Portrait)
-			return Quaternion.identity;
-		
-		if (Screen.orientation == ScreenOrientation.LandscapeLeft || Screen.orientation == ScreenOrientation.Landscape)
-			return landscapeLeft;
-				
-		if (Screen.orientation == ScreenOrientation.LandscapeRight)
-			return landscapeRight;
-				
-		if (Screen.orientation == ScreenOrientation.PortraitUpsideDown)
-			return upsideDown;
-		return Quaternion.identity;
-#else
         return Quaternion.identity;
-#endif
     }
 
-    /// <summary>
-    /// Recalculates reference system.
-    /// </summary>
+    // Recalculates reference system.
     private void ResetBaseOrientation() {
         baseOrientationRotationFix = GetRotFix();
         baseOrientation = baseOrientationRotationFix * baseIdentity;
     }
 
-    /// <summary>
-    /// Recalculates reference rotation.
-    /// </summary>
+    // Recalculates reference rotation.
     private void RecalculateReferenceRotation() {
         referanceRotation = Quaternion.Inverse(baseOrientation) * Quaternion.Inverse(calibration);
     }
