@@ -15,21 +15,22 @@ public class ButtonScript : Button {
             rightButton = false;
     }
 
+
     void FixedUpdate() {
-        if (this.IsPressed() ) {
+        if (this.IsPressed() && this.gameObject.name == "ForwardButton" || this.IsPressed() && this.gameObject.name == "BackwardButton") {
             Debug.Log(gameObject.name + "is being pressed");
             camera.move(rightButton);
             camera.IsMoving = true;
         }
-    }
-
-    void OnRelease() {
-        camera.stopMovement();
-        Debug.Log("button released");
+        if (this.IsPressed() && this.gameObject.name == "LeftRotationButton" || this.IsPressed() && this.gameObject.name == "RightRotationButton") {
+            camera.rotateLeftRight(this.gameObject.name == "LeftRotationButton");
+        }
+        if (this.IsPressed() && this.gameObject.name == "DownRotationButton" || this.IsPressed() && this.gameObject.name == "UpRotationButton") {
+            camera.rotateUpDown(this.gameObject.name == "DownRotationButton");
+        }
+        if (!this.IsPressed() && this.gameObject.name == "ForwardButton" | !this.IsPressed() && this.gameObject.name == "BackwardButton") {
+            camera.stopMovement();
+        }
     }
   
-    // Update is called once per frame
-    void Update() {
-
-    }
 }
