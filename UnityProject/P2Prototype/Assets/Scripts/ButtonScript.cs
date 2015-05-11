@@ -3,11 +3,11 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class ButtonScript : Button {
-    private CamMovement camera;
-    public bool rightButton;
+    private new CamMovement camera;
+    private bool rightButton;
 
-    // Use this for initialization
-    void Start() {
+    override
+    protected void Start() {
         camera = GameObject.Find("Camera").GetComponent<CamMovement>();
         if (this.gameObject.name == "BackwardButton")
             rightButton = true;
@@ -15,12 +15,11 @@ public class ButtonScript : Button {
             rightButton = false;
     }
 
-
+    
     void FixedUpdate() {
         if (this.IsPressed() && this.gameObject.name == "ForwardButton" || this.IsPressed() && this.gameObject.name == "BackwardButton") {
             Debug.Log(gameObject.name + "is being pressed");
             camera.move(rightButton);
-            camera.IsMoving = true;
         }
         if (this.IsPressed() && this.gameObject.name == "LeftRotationButton" || this.IsPressed() && this.gameObject.name == "RightRotationButton") {
             camera.rotateLeftRight(this.gameObject.name == "LeftRotationButton");

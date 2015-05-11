@@ -7,9 +7,6 @@ public class GyroController : MonoBehaviour {
     private const float lowPassFilterFactor = 0.1f;
 
     private Quaternion baseIdentity = Quaternion.Euler(90, 0, 0);
-    private Quaternion landscapeRight = Quaternion.Euler(0, 0, 90);
-    private Quaternion landscapeLeft = Quaternion.Euler(0, 0, -90);
-    private Quaternion upsideDown = Quaternion.Euler(0, 0, 180);
 
     private Quaternion cameraBase = Quaternion.identity;
     private Quaternion calibration = Quaternion.identity;
@@ -17,8 +14,6 @@ public class GyroController : MonoBehaviour {
     private Quaternion baseOrientationRotationFix = Quaternion.identity;
 
     private Quaternion referanceRotation = Quaternion.identity;
-    
-    private bool debug = false;
 
 
 
@@ -31,7 +26,8 @@ public class GyroController : MonoBehaviour {
         if (!gyroEnabled)
             return;
         transform.rotation = Quaternion.Slerp(transform.rotation,
-            cameraBase * (ConvertRotation(referanceRotation * Input.gyro.attitude) * GetRotFix()), lowPassFilterFactor);
+                                              cameraBase * (ConvertRotation(referanceRotation * Input.gyro.attitude) * GetRotFix()),
+                                              lowPassFilterFactor);
     }
 
 
@@ -44,7 +40,7 @@ public class GyroController : MonoBehaviour {
         RecalculateReferenceRotation();
     }
 
-    
+
     // Detaches gyro controller from the transform
     private void DetachGyro() {
         gyroEnabled = false;
@@ -56,16 +52,13 @@ public class GyroController : MonoBehaviour {
         if (onlyHorizontal) {
             var fw = (Input.gyro.attitude) * (-Vector3.forward);
             fw.z = 0;
-            if (fw == Vector3.zero) {
+            if (fw == Vector3.zero)
                 calibration = Quaternion.identity;
-            }
-            else {
+            else
                 calibration = (Quaternion.FromToRotation(baseOrientationRotationFix * Vector3.up, fw));
-            }
         }
-        else {
+        else 
             calibration = Input.gyro.attitude;
-        }
     }
 
     // Update the camera base rotation.
@@ -73,19 +66,16 @@ public class GyroController : MonoBehaviour {
         if (onlyHorizontal) {
             var fw = transform.forward;
             fw.y = 0;
-            if (fw == Vector3.zero) {
+            if (fw == Vector3.zero) 
                 cameraBase = Quaternion.identity;
-            }
-            else {
+            else 
                 cameraBase = Quaternion.FromToRotation(Vector3.forward, fw);
-            }
         }
-        else {
+        else
             cameraBase = transform.rotation;
-        }
     }
 
-    
+
     // Converts the rotation from right handed to left handed.
     private static Quaternion ConvertRotation(Quaternion q) {
         return new Quaternion(q.x, q.y, -q.z, -q.w);

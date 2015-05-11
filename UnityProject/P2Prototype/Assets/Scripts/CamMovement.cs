@@ -8,6 +8,7 @@ public class CamMovement : MonoBehaviour {
     public bool IsMoving { get; set; }
     private Rigidbody rigBody;
     public float rotationSpeed = 10;
+    public float smooth = 2.0F;
 
     void Awake() {
         rigBody = GetComponent<Rigidbody>();
@@ -18,6 +19,7 @@ public class CamMovement : MonoBehaviour {
             stopMovement();
         else
             Mathf.Clamp(rigBody.velocity.magnitude, 0, moveSpeed);
+        
     }
 
     public void move(bool rightButton) {
@@ -27,14 +29,18 @@ public class CamMovement : MonoBehaviour {
         rigBody.velocity = directionVector;
     }
 
+
     public void rotateLeftRight(bool right) {
         int rotateRight = right ? -1 : 1;
-        transform.Rotate(Vector3.up, rotationSpeed * rotateRight);
+        Quaternion target = Quaternion.Euler(transform.rotation.eulerAngles.x , transform.rotation.eulerAngles.y + 2 * rotationSpeed * rotateRight, 0);
+        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
+
     }
 
     public void rotateUpDown(bool down) {
-        int rotateDown = down ? -1 : 1;
-        transform.Rotate(Vector3.left, rotationSpeed * rotateDown);
+        int rotateDown = down ? 1 : -1;
+        Quaternion target = Quaternion.Euler(transform.rotation.eulerAngles.x + 2*rotationSpeed * rotateDown, transform.rotation.eulerAngles.y, 0);
+        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
     }
 
     public void stopMovement() {
