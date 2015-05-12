@@ -21,7 +21,7 @@ public class CamMovement : MonoBehaviour {
             Mathf.Clamp(rigBody.velocity.magnitude, 0, moveSpeed);
         
     }
-
+    
     public void move(bool rightButton) {
         IsMoving = true;
         int goingForward = rightButton ? -1 : 1;
