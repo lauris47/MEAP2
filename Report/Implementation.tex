@@ -1,0 +1,14 @@
+\chapter{Implementation}
+This chapter will describe how the implementation for the evaluation has been made. first lets take a look at what has to be implemented and why.
+\begin{itemize}
+\item Test Level\\
+this is the 3D environment that will be used to test the different control schemes. 
+\item Gyroscopic controls\\
+The control scheme that will use the gyroscope found in many mobile devices, what the gyroscope will be used for is to make it seem natural to turn around when looking in a virtual 3D space environment. 
+\item Joystick controls\\
+this control scheme is composed of two joystick like buttons, that respond to being dragged, one joystick will control the camera movement and the other the orientation of the camera. The idea is that this control scheme will seem familiar%reference to UX section
+to users because the common place console controller uses the same kind of dragable joystick.
+\item Standard button controls\\
+Because the previously described control schemes uses concepts that might not be immediately familiar to all users, this standard button control scheme was designed to see if users who are not familiar with joysticks and using their body movements, would perform better with a control scheme made out of buttons, all the buttons are able to trigger when being held down.
+\end{itemize}
+these four things are what is needed in the projects implementation. To implement this what is needed is some sort of framework for working within a 3D environment, there are two ways to go about this, either build such a framework from scratch or use one of the many game engines available. Since developing a fully fletched 3d engine is beyond the scope of this project, the choice fell on developing from within an available 3D engine
