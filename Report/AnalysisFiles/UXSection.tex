@@ -98,7 +98,40 @@ The topics discussed in the previous section helps define what the app has to be
 \end{itemize} 
 these points together with the intuitiveness discussion above should enable the app to provide an intuitive user experience. 
 
-\subsection{Mobile Usability}
-According to the Journal of Interaction Science (http://www.journalofinteractionscience.com/content/1/1/1) \todo{needs to be made into a reference}, mobile usability is measured by these three attributes: effectiveness, efficiency and satisfaction. These attributes may not always be achieved with traditional interaction methods – because they are limited to visual feedback dependent on touch interaction with the device (which, for instance, will not be able to utilize a sense of 3d placement of the device in its environment). It has also been shown that it might conflict with the users interaction, if the user has limited mobility (e.g. has a case of Tetraplegia) – it will cause higher error rates with the interaction (especially with complex applications that have smaller buttons). This project will focus on utilizing the use of non-traditional interaction methods to focus on enhancing user experience by using interactional input means that are not considered traditional.
+\subsection{Usability}
+According to John Wiley’s “Interaction design”, there are usability goals that worth considering when developing interactive usable system (Wiley, Interaction design, 2015). Covered usability goals are:
+\begin{itemize}
+\item effective to use - it is how system does what it suppose to do;
+\item efficient to use - how does the system supports user while he interacts 	with it;
+\item safe to use ;
+\item good utility - provides with variety of functionality that user might need; 
+\item easy to learn;
+\item easy to remember how to use.
+\end{itemize}
 
-As we are aiming for a better user experience, and one of the factors is the previous experience the user has had involving the task, a proper approach would be to guide the user through the switching process between interaction methods. E.g. if a task would normally be performed with traditional gestures, the user should be intuitively guided on how to do it in an alternative way. On the other hand, users that have no prior experience with the task or similar apps, should be able to discover what they need easily. Although, context of use is not considered often (according to the same article, less than 10\% of the taken studies took it into consideration), as opposed to previously made point.
+Wiley notes that not all of the goals are needed for most of the systems. Specific system should have specific goals. Probably most important and relevant for this application design is effectiveness and efficiency. To help user to navigate 3D environment easy system has to be with accurate response which saves time and does wanted task quickly. Fx. if user wants to view 3D object from certain angle, it is easy and fast to navigate to the point where the view angle is desired. For the beginners of such interaction with 3D environment, “easy to learn” and “easy to remember” goals would be most relevant. Don Norman in his “The Design of Everyday Things” states that there is principle of “Affordance”. (Norman, The Design of Everyday Things, 1988)  Principle is being explained as fx. Cup is affordable to being picked up; door is affordable of being opened because of it’s handle; button affords being pressed etc. So if the user is beginner, principle of affordance is extremely useful. Norman notes that there are two “affordances” real and perceived. Real is the one in real world as in examples mentioned above, and perceived is imitation of real. Fx. in this design, for beginners users especially, navigation buttons needs to look very similar to “real” navigation buttons. Fx. if user is familiar with any common video gaming console buttons, they have to be represented in a interactive software system with similarity to real one. 
+
+Don Norman also covers other principles of usability:
+\begin{itemize}
+\item Visibility - how visible is the button on the screen ?
+\item Feedback - what kind of feedback does the system gives to the user ?
+\item Constrains - visual constraints as fx graying out some menu which is not used;
+\item Mapping - layout of menus, buttons etc.;
+\item Consistency - layout’s, colors, typography etc consistency through the system;
+\item Affordance  - real and perceived affordance, covered above.
+\end{itemize}
+(Norman, The Design of Everyday Things, 1988)
+
+Like with usability goals not all of the principles of usability needs to be in one system. However, in this case, design of the program can include all mentioned principles. Fx, if the 3D navigation system is controlled by the buttons on the screen, they need to be visible, give some sort of feedback when pressed, mapped out with consistency rules and visualized with “affordance” principle. 
+
+\subsubsection{Mobile Usability}
+
+Since the design of this system is meant to be on a mobile platform, there are certain aspect to consider. Some users might have limited mobility or problems with manual dexterity (e.g. has a case of Tetraplegia) - it will cause higher error rates with the interaction (Wiley, Interaction design, 2015). Even small aspects like person’s bigger fingers can cause troubles while using mobile phone and especially while interaction needs precision. This problem is mentioned in many articles, reports, researches as fx. in “The Generalized Perceived Input Point Model and How to Double Touch Accuracy by Extracting Fingerprints” where they introduce possible solution to this problem. Since the focus of this project is not solving such problems, deep analysis will not be done. However, some considerations might be done, as fx. using Norman’s principle of “feedback”. Buttons pressed on screen can change color or size, mobile device could use some sensors to indicate that action was achieved, as vernation, blinking flash etc. It is especially useful since most smartphones using on-screen touch buttons and physical sensation of touching the button is not existing.  In that case, user who did not register if he successfully completed wanted action, mobile device would help and give feedback using its sensors. Feedback is also useful to people who do not put lots of attention to their interaction accuracy, fx pressing somewhere around button area and not on it. Feedback would help user to know if action was successful. 
+In general, it is important to consider minorities and helping user effectively understand their efficiency of actions. Since this non-traditional interaction method can be used by many people as was discovered in analysis of target group, product needs to be optimized to at least fit majority of the users. 
+
+\subsubsection{conclusion}
+
+Considering Norman’s and Wiley’s mentioned usability goals and principles it is possible to create an useful application. Usability goals of effectiveness and efficiency, will be achieved by using all covered principles. Principles will be used in creation of visual elements and coding. Having goals as easy to learn and remember, will help user with digital knowledge to narrow knowledge gap while using app first time. Solution to that is to create interactive navigation using affordance principle and visual familiarity.
+
+
+
