@@ -228,26 +228,18 @@ namespace UnityStandardAssets.Characters.FirstPerson {
 
 
         private void RotateView() {
-#if !MOBILE_INPUT
-
-            m_MouseLook.LookRotation (transform, m_Camera.transform);
-#else
-            Vector2 mouseInput = new Vector2(CrossPlatformInputManager.GetAxisRaw("HorizontalLook"),
-                                             CrossPlatformInputManager.GetAxisRaw("VerticalLook"));
+            Vector3 input = new Vector3(CrossPlatformInputManager.GetAxisRaw("HorizontalLook"),
+                                        CrossPlatformInputManager.GetAxisRaw("VerticalLook") ,0);
             float camX = m_Camera.transform.localEulerAngles.x;
-
             if ((camX > 280 && camX <= 360) ||
                (camX >= 0 && camX < 80) ||
-                (camX >= 80 && camX < 180 && mouseInput.y > 0) ||
-                (camX > 180 && camX <= 280 && mouseInput.y < 0))
-                m_Camera.transform.localEulerAngles += new Vector3(-mouseInput.y * m_LookSpeed,
-                                                            m_Camera.transform.localEulerAngles.y,
+                (camX >= 80 && camX < 180 && input.y > 0) ||
+                (camX > 180 && camX <= 280 && input.y < 0))
+                m_Camera.transform.localEulerAngles += new Vector3(-input.y * m_LookSpeed,
+                                                                    m_Camera.transform.localEulerAngles.y,
                                                                     m_Camera.transform.localEulerAngles.z);
-            m_YRotation = mouseInput.y;
-            transform.localEulerAngles += new Vector3(0, mouseInput.x * m_LookSpeed, 0);
-#endif
-
-
+            m_YRotation = input.y;
+            transform.localEulerAngles += new Vector3(0, input.x * m_LookSpeed, 0);
         }
 
 
