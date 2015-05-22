@@ -1,25 +1,61 @@
 \section{Design Requirements}
-Knowledge gap is all the knowledge that the app/programme will have to provide so that the user is confident in how the app/programme works. This is usually provided with tutorials but it can also be done using familiarity or intuition. When it comes to controlling devices, whether it is an interface or a game, the user is usually familiar with a way to control this specific environment. In a game the user usually controls a character with a keyboard and/or a mouse, depending on the games mechanics.  Respectively if the game is in a first person perspective, it would be common to control it with a keyboard for walking around and mouse to move a camera.  When using an internet browser it would be common that the tabs and any other navigational tool would be placed on the top of the browser’s window. One of the reasons these things are very similar in the way of controlling them is because it is easier for a user to switch between devices or programmes to use. Making the products similar makes the user’s experience to transfer between them way faster and more intuitive. For example Android smartphones and iPhones. The all have more or less the same graphical layout in terms of icon placement or function placement. The same goes for Windows and Macbook laptops. 
-Making products of the same function it is common that the interaction and graphical layout, if such needed, is very similar because the users are already familiar with the way of interaction of the specific product. 
-Therefore when creating a product when having user experience in mind, it is necessary to make the interaction familiar or intuitive for the user. 
+The goal for the prototype is to define which way to control the 3D virtual environment is the most familiar one for the user and also the most intuitive one. As mentioned in User Experience chapter (\ref{UXStrategy}), familiarity is very related to intuitiveness.
+
+For the project to answer the question of minimizing the knowledge gap through the concept of familiarity, several design requirements need to be established:
+
+\begin{itemize}
+\item Uphold one of the two conditions from the knowledge gap (section \ref{KnowledgeGap})\
+\item Make UI elements stand out through the use of isolation (section \ref{IsolationEffect})\
+\item Make use of gyroscope in terms of reflecting real life movement\
+\item Stick to one color scheme\
+\item Limit amount of information given to the user\
+\end{itemize}
+
+In the following section, these requirements will be covered.
+
+The prototype needed to have two features to navigate in 3D virtual environment - the moving of the character and the camera movement/rotation. The familiarity concept was put into effect as the control schemes for controlling the environment had to be linked with something that the user might be familiar with already. It was chosen to make extremities of the control schemes to establish familiarity in distinct ways.
+
+The currently existing sensors in mobiles enable the creation of unusual ways of controlling a 3d environment. With the goal in mind of achieving familiarity and intuitivity through the non-traditional sensors, two different approaches to familiarity were established. The knowledge and familiarity to the currently existing products on the market (State of the Art, \ref{SOTA}), and the familiarity of movement representative to the one of movement in real life. For both approaches the current and the target knowledge (\ref{KnowledgeGap}), points for the user are expected to be separate. The design needs to be established in a way to help the users get through the knowledge gap intuitively, when they are involved in the designed task. 
 
 
-As mentioned in the analysis part, familiarity is very related to intuitiveness. The goal for the prototype is to define which way to control the 3D virtual environment is the most familiar one for the user and also the most intuitive one. The navigation design choices were made. The familiarity concept was put into effect as the control schemes for controlling the environment had to be linked with something that the user might be familiar with already. The prototype needed to have two features to navigate in 3D virtual environment - the moving of the character and the camera movement/rotation. It came down to three options that seemed the most representative of the familiarity and intuitivity concepts. 
-The first one was to control the camera with an in-built gyroscope in the tablet. This is familiar with natural way of a person looking around, by turning the direction user wishes to move. The movement forwards and backwards was implemented with on-screen buttons as these were familiar to the target group through the usual daily tasks - TV channel incrementing with forward/back buttons, more so - most computer games and tasks that require moving around with buttons. 
-In the second prototype the user has to navigate using joysticks as this should be easy to learn for the users that have played console games that require navigating a character with joysticks placed on game console’s remote like Sony Playstation 4 or Microsoft Xbox One. Additionally, even for users with no previous joystick controller experience, that should not be a problem, as the control scheme is supposed to borrow the same concepts as scrolling an internet browser/editing tool window to the sides, and moving a computer mouse on the screen in the direction that is same as the device movement itself.
-The third and the last one was made implementing only buttons as the way to move both camera and the character. In this case camera was moved only with arrow keys located on the screen and same for moving around - arrows indicating movement back and forth. This should be familiar with anyone that has buttons for navigation of any sorts in virtual environment. 
+\subsection{Control Schemes}
+\subsubsection{Gyroscopic Controls}
+Establishing the gyroscopic sensor creates a possibility to interact in an unusual, but familiar way. It enables the prototype to be built around what is most familiar to the real life in movement - actual moving around in reality to navigate.
 
+Controlling the camera with an in-built gyroscope in the tablet is familiar with a natural way for a person to look around - by turning the direction user wishes to move. The movement forward and backwards was implemented with on-screen buttons as these were familiar to the target group through the usual daily tasks, since most of the controllers for movement are represented as such (e.g. arrows on the computer keyboard, music player, cell phone).
 
-By implementing familiarity concept to the ways of navigation we have tangled the problem of minimizing the knowledge gap in a way that the user is being trained in a way that seems natural.
+\subsubsection{Joystick}
+In this prototype the user has to navigate using two joysticks - one for movement and one for camera movement/rotation. This should be easy to learn for the users that have experienced using a joystick before, and the target group is expected to have some knowledge as of how to a joystick is supposed to work, because of their popularity in arcade and electronic games, where joysticks are placed on game console’s remotes like Sony Playstation series or Microsoft Xbox. Additionally, even for users with no previous joystick controller experience, that should not be a problem, as the control scheme is supposed to borrow the same concept as moving a computer mouse on the screen in the direction that is same as the device movement itself - both use 2d directional movement.
+
+\subsubsection{On-screen Buttons}
+The way that should be the most familiar with the users through daily use - only buttons as the way to move both camera and the character. In this case camera would be moved only with arrow keys located on the screen and same for moving around - arrows indicating movement back and forth. This should be familiar with anyone that has used buttons for navigation of any sorts in virtual environment. 
+
+By implementing familiarity concept to navigation, the problem of minimizing the knowledge gap is tangled so that the user is being trained in a way that seems natural.
 
 
 \subsection{Immediacy and Simplicity}
-To communicate information in a simpler, and faster to perceive manner, the designs will be represented by concepts, that are already familiar to the user. This means, that to communicate information to the user, graphical elements will be represented as symbols, rather than text. As discussed in sections (?, ?, ?), this will further shape the familiarity and intuitivity for the application.
+To communicate information in a simpler, and faster to perceive manner, the designs will be represented by concepts that are already familiar to the user. This means, that to communicate information to the user, graphical elements will be represented as symbols, that indicate either movement or rotation for buttons, and controls that represent an actual joystick, rather than text. At the same time, this emphasizes the concept of affordance\todo{(need ref from the upcoming usability section)}, as the buttons represent mechanical buttons used in traditional types of controllers, as well as with the joystick controls. As discussed in sections \todo{references}(?, ?, ?), this will further shape the familiarity and intuitivity for the application.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.55]{JoystickComparison.png}
+\caption{Comparison of initial design sketch of on-screen joystick and the Sony Playstation controller}
+\end{figure}
 
 \subsection{Graphical element sizes and placement}
-To further emphasize on our initial design requirements (ref to graphical design), the button size should be set accordingly - to ensure that the users would not have difficulties by unintentionally tapping the wrong section of the controls, individual buttons will be separated from each other and given the sizes for easy accessibility.
+To further emphasize on the user experience\todo{(ref to UX tetraplegia stuff)}, the button size should be set accordingly - to ensure that the users would not have difficulties by unintentionally tapping the wrong section of the controls, individual buttons have to be separated from each other and given the sizes for easy accessibility to reduce the “Fat Finger” problem.
+To enable a bigger view of the environment horizontally, the application will be built to primarily be viewed when holding the device in a landscape mode. Since the device is supposed to be held sideways and by both hands, all of the interaction should be done on the sides of the screen, for ease of control access.
 
-To enable a bigger view of the environment horizontally, the application will be built to primarily be viewed when holding the device in a landscape mode. Since the device is supposed to be held sideways and by both hands, all of the interaction should be done on the sides of the screen.
+To show the difference between movement and rotation controls, they should be given different looks - shape of directional arrows for buttons as well as color indication for both - buttons and joystick controls.
 
-Initially to show the difference between movement and rotation buttons, they should be given different looks - shape of directional arrows as well as color indication.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{ControllerColors.png}
+\caption{Initial sketch. Color differences to distinguish controllers that hold different functions}
+\end{figure}
+
+\subsection{Isolation}
+To further emphasize on the initial design requirements, the concept of isolation (\ref{IsolationEffect}) should be used when designing the controllers - this should be done by making them stand out from the level content. This is supposed to help the user understand what parts of the application give feedback upon interaction.
+
+\subsection{Conclusion}
+These design requirements will help build the necessary prototypes that aim to minimize the knowledge gap using an interface to move in 3d virtual environment on a mobile platform.
