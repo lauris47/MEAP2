@@ -1,5 +1,17 @@
 \begin{thebibliography}{}
 
+\bibitem[Jar, ]{JaredMSpool}
+
+
+\bibitem[UXK, ]{UXKeys}
+
+
+\bibitem[Col, ]{ColorMeaning}
+
+
+\bibitem[Gra, ]{Graphic}
+
+
 \bibitem[Bonneville, 2010]{TypeComb}
 Bonneville, D. (2010).
 \newblock Best practices of combining typefaces.
@@ -7,9 +19,26 @@ Bonneville, D. (2010).
   http://www.smashingmagazine.com/2010/11/04/best-practices-of-combining-typefaces
   }.
 
-\bibitem[Ciotti, 2013]{ColorMeaning}
-Ciotti, G. (2013).
-\newblock The psychology of colour in marketing and branding.
+\bibitem[Developers, ]{AndroidDevelopers}
+Developers, A.
+\newblock Motion sensors.
+\newblock \url{
+  http://www.smashingmagazine.com/2010/11/04/best-practices-of-combining-typefaces
+  }.
+
+\bibitem[Examstutor.com, 2015]{Psychographic}
+Examstutor.com (2015).
+\newblock Psychographic segment.
+\newblock \url{
+  http://www.examstutor.com/business/resources/studyroom/marketing/market_analysis/8_psychographic_segmentation.php
+  }.
+
+\bibitem[Greenfield, ]{Greenfield}
+Greenfield, S.
+\newblock Modern technology is changing the way our brains work.
+\newblock Daily Mail website.
+\newblock
+  \url{http://www.dailymail.co.uk/sciencetech/article-565207/Modern-technology-changing-way-brains-work-says-neuroscientist.html/},.
 
 \bibitem[Gube, 2010]{UXIntro}
 Gube, J. (2010).
@@ -23,6 +52,12 @@ Hampton-Smith, S. (2014).
 \newblock How to master colour theory.
 \newblock \url{ http://www.creativebloq.com/colour/colour-theory-11121290 }.
 
+\bibitem[Jenny~Preece, 2015]{Wiley}
+Jenny~Preece, Helen~Sharp, Y.~R. (2015).
+\newblock {\em Interaction Design: Beyond Human-Computer Interaction, 4th
+  Edition}.
+\newblock Wiley.
+
 \bibitem[Mayer, 2010]{Font}
 Mayer, D. (2010).
 \newblock What font should i use?: Five principles for choosing and using
@@ -30,11 +65,6 @@ Mayer, D. (2010).
 \newblock \url{
   http://www.smashingmagazine.com/2010/12/14/what-font-should-i-use-five-principles-for-choosing-and-using-typefaces
   }.
-
-\bibitem[McGlurg-Genevese, 2005]{DesignPrinciple}
-McGlurg-Genevese, J.~D. (2005).
-\newblock The principles of design.
-\newblock \url{ http://www.digital-web.com/articles/principles_of_design }.
 
 \bibitem[Neil, 2014]{Pattern}
 Neil, T. (2014).
@@ -47,6 +77,17 @@ Nielsen, J. and Budui, R. (2015).
 \newblock {\em Mobile Usability}.
 \newblock The Nielsen Norman Group.
 \newblock ISBN:978-0-321-88448-0.
+
+\bibitem[Norman, 1988]{Norman}
+Norman, D. (1988).
+\newblock {\em The Design of Everyday Things}.
+\newblock DOUBLEDAY.
+
+\bibitem[Prensky, 2001]{DigitalImmigrants}
+Prensky, M. (2001).
+\newblock Digital immigrants , digital natives.
+\newblock
+  \url{http://www.marcprensky.com/writing/Prensky%20-%20Digital%20Natives,%20Digital%20Immigrants%20-%20Part1.pdf}.
 
 \bibitem[Raskin, 1994]{JRaskin}
 Raskin, J. (1994).
