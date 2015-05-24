@@ -22,9 +22,22 @@ Actual implementation consisted of creating level areas, 3D prefabs - cones and 
 \end{figure}
 
 Every object that required texturing, also needed its own UV map. UV map is 3 dimensional model representation in 2 dimensions - it helps to see and paint texture using tools as Photoshop. Since graphics and aesthetics were not focus of this test level, textures were created very minimalistic - without any shadowing, noise, imitation of being old or used etc. It also helped to make test very optimized in hardware performance, since textures size on disk were as little as few kilobytes. 
-\subsection{Unity Implementation}
-\subsection{ButtonScript}
-{\tt ButtonScript} inherits from the in-built Unity {\tt Button} object. This is done so that the script can access the method {\tt   protected bool IsPressed()}. This script is the script that all buttons in both the buttons and gyro scene uses. it is a simple extension as all it has to do is check if the button is being pressed, and if it is then check which button it is and act accordingly
+\subsection{Unity Introduction}
+For this implementation the choice was made to use the freely available Unity3D engine, this was chosen as Unity provides a lot of features that would otherwise mean that this project would not be possible to complete in the amount of time given. This section will provide a quick glance at what Unity is and introduce some common terms used within Unity. Everything that is seen in a Unity game is composed of {\tt GameObjects} these objects are what the scripts described in the following sections will be attached to. A newly created {\tt GameObject} will only contain what is known as a {\tt Transform} the transform is an object that holds the information about where the object is within the 3D space. It also holds the objects rotational information  and its scale.
+the position of the object is expressed as a vector, a vector is a mathematical tool for representing a coordinate in space. As such vectors are the primarily tool that is used in unity for expressing things like velocity, position, forces etc.
+\subsection{Buttons}
+The buttons used in all three schemes are all created using unity's UI system. A button in the UI system is just a empty {\tt GameObject} that holds the following components:
+\begin{itemize}
+\item {\tt Rect Transform}\\
+this component is equivalent to the regular {\tt Transform}.  However this component does not contain any information about the objects position in 3D space as it is part of the UI it only needs to know its coordinates on a 2D plane. The UI system provides a convenient way of making sure that UI will look the same no matter what screen size is used. It does this by having coordinates relative to a anchor point that is set by the developer. 
+\item {\tt Button}\\
+this is the standard script that unity uses to detect clicks on a button and can call methods on different objects when clicked. This script is the script that has been modified to allow for pressing and holding.
+\item {\tt Image} \\
+this component is a component that will draw an image on the canvas this image will be the full size of the button
+\item 
+\end{itemize}
+\subsubsection{{\tt ButtonScript}}
+{\tt ButtonScript} inherits from the in-built Unity {\tt Button} object. This is done so that the script can access the method {\tt   protected bool IsPressed()}. This script is the script that all buttons in both the buttons and gyro scene uses. it is a simple extension as all it has to do is check if the button is being pressed, and if it is then check which button it is and act accordingly. 
 \subsection{Buttons Scene}
 the button scene is the only scene that only uses  {\tt CamMovement} and {\tt ButtonScript} and as such is the simplest scene technically. Presented below is  the methods contained within {\tt camMovement}: 
 \begin{itemize}
