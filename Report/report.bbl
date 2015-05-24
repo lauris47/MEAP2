@@ -1,23 +1,16 @@
 \begin{thebibliography}{}
 
-\bibitem[Jar, ]{JaredMSpool}
-
-
-\bibitem[UXK, ]{UXKeys}
-
-
-\bibitem[Col, ]{ColorMeaning}
-
-
-\bibitem[Gra, ]{Graphic}
-
-
 \bibitem[Bonneville, 2010]{TypeComb}
 Bonneville, D. (2010).
 \newblock Best practices of combining typefaces.
 \newblock \url{
   http://www.smashingmagazine.com/2010/11/04/best-practices-of-combining-typefaces
   }.
+
+\bibitem[Ciotti, 2013]{ColorMeaning}
+Ciotti, G. (2013).
+\newblock The psychology of colour in marketing and branding.
+\newblock \url{ http://www.helpscout.net/blog/psychology-of-color/ }.
 
 \bibitem[Developers, ]{AndroidDevelopers}
 Developers, A.
@@ -52,12 +45,6 @@ Hampton-Smith, S. (2014).
 \newblock How to master colour theory.
 \newblock \url{ http://www.creativebloq.com/colour/colour-theory-11121290 }.
 
-\bibitem[Jenny~Preece, 2015]{Wiley}
-Jenny~Preece, Helen~Sharp, Y.~R. (2015).
-\newblock {\em Interaction Design: Beyond Human-Computer Interaction, 4th
-  Edition}.
-\newblock Wiley.
-
 \bibitem[Mayer, 2010]{Font}
 Mayer, D. (2010).
 \newblock What font should i use?: Five principles for choosing and using
@@ -78,7 +65,7 @@ Nielsen, J. and Budui, R. (2015).
 \newblock The Nielsen Norman Group.
 \newblock ISBN:978-0-321-88448-0.
 
-\bibitem[Norman, 1988]{Norman}
+\bibitem[Norman, 1988]{Normans}
 Norman, D. (1988).
 \newblock {\em The Design of Everyday Things}.
 \newblock DOUBLEDAY.
@@ -94,8 +81,26 @@ Raskin, J. (1994).
 \newblock Intuitive equals familiar.
 \newblock Technical report, Communications of the ACM.
 
+\bibitem[Robinson, 2013]{UXKeys}
+Robinson, K. (2013).
+\newblock 3 keys to develop a faster, more intuitive user experience.
+\newblock Openview Labs.
+\newblock
+  \url{http://labs.openviewpartners.com/intuitive-user-experience-design/}.
+
+\bibitem[Rogers, 2015]{Wileys}
+Rogers, J. P. H. S.~Y. (2015).
+\newblock {\em Interaction Design: Beyond Human-Computer Interaction, 4th
+  Edition}.
+\newblock Wiley.
+
 \bibitem[Sardo, 2009]{Sardo}
 Sardo, G. (2009).
 \newblock Building mobile user experiences.
+
+\bibitem[Spool, 2005]{JaredMSpool}
+Spool, J.~M. (2005).
+\newblock What makes a design seem 'intuitive'?
+\newblock \url{http://www.uie.com/articles/design_intuitive/}.
 
 \end{thebibliography}

@@ -2,25 +2,13 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: report.aux
 A level-1 auxiliary file: Intro.aux
 The style file: apalike.bst
 Database file #1: LiteratureList.bib
-Repeated entry---line 132 of file LiteratureList.bib
- : @misc{ColorMeaning
- :                   ,
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 159 of file LiteratureList.bib
+I was expecting a `,' or a `}'---line 139 of file LiteratureList.bib
  : 
  : note = "\url{http://www.wisdompage.com/Prensky01.html}"
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "DigitalWisdom"
-Warning--to sort, need author or key in JaredMSpool
-Warning--to sort, need author or key in UXKeys
-Warning--to sort, need author or key in ColorMeaning
-Warning--to sort, need author or key in Graphic
-Warning--empty year in JaredMSpool
-Warning--empty year in UXKeys
-Warning--empty year in ColorMeaning
-Warning--empty year in Graphic
 Warning--empty year in AndroidDevelopers
 Warning--empty year in Greenfield
 Warning--empty journal in Sardo
-(There were 2 error messages)
+(There was 1 error message)
