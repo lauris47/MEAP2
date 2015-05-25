@@ -1,5 +1,16 @@
 \begin{thebibliography}{}
 
+\bibitem[car, a]{cardSorting}
+
+
+\bibitem[car, b]{cards}
+Card sorting.
+\newblock \url{http://usabilitynet.org/tools/cardsorting.htm}.
+
+\bibitem[per, ]{performance}
+Performance testing.
+\newblock \url{http://usabilitynet.org/tools/testing.htm}.
+
 \bibitem[Ciotti, 2013]{ColorMeaning}
 Ciotti, G. (2013).
 \newblock The psychology of colour in marketing and branding.
@@ -39,11 +50,11 @@ Neil, T. (2014).
 \newblock O'Reilly Media, Inc., 2nd edition.
 \newblock ISBN:8349857349687.
 
-\bibitem[Nielsen and Budui, 2015]{MobileUsability}
-Nielsen, J. and Budui, R. (2015).
-\newblock {\em Mobile Usability}.
-\newblock The Nielsen Norman Group.
-\newblock ISBN:978-0-321-88448-0.
+\bibitem[Nielsen, 2012]{usability}
+Nielsen, J. (2012).
+\newblock Usability 101: Introduction to usability.
+\newblock
+  \url{http://www.nngroup.com/articles/usability-101-introduction-to-usability/}.
 
 \bibitem[Norman, 1988]{Normans}
 Norman, D. (1988).
