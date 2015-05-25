@@ -1,14 +1,14 @@
 \chapter{Design}
 \subsection{Introduction}
-In this chapter, the design of the prototype and its graphical decisions will be discussed and defined, with the requirements set in the analysis, which were further defined in the design requirements section (\ref{DesignRequirements}). When designing, different aspects will be taken into consideration for user experience - usability goals \ref{UsabilityGoals} and principles \ref{UsabilityPrinciples}, mobile usability \ref{MobileUsability}, establishing intuitivity through familiarity, as well as the technical side on which the user experience also depends - fluent implementation of the graphical user interface and non-traditional sensors, while also ensuring that the system performance is smooth. In further design iterations users would be involved in the design process \ref{IterativeDesignProcess}, as user centered design is one of the elements to designing a good user experience \ref{UserCenteredDesign}.
+In this chapter, the design of the prototype and its graphical decisions will be discussed and defined, with the requirements set in the analysis, which were further defined in the design requirements section (\ref{DesignRequirements}). When designing, different aspects will be taken into consideration for user experience - usability goals and principles (\ref{sec:UsabilityGoals}), mobile usability (\ref{MobileUsability}), establishing intuitivity through familiarity, as well as the technical side on which the user experience also depends - fluent implementation of the graphical user interface and non-traditional sensors, while also ensuring that the system performance is smooth. In further design iterations users would be involved in the design process (\ref{UserCenteredDesign}), as user centered design is one of the elements to designing a good user experience (\ref{fig:UserCenteredDesign}).
 
 \subsection{Concept}
 The goal of the prototype is to help in answering which control scheme may be the best solution for the most familiar and effective navigation in 3d environment. Designing a prototype that creates a familiar and effective navigation that is not traditional can go in various directions, but the concept was narrowed down to using just the sensors that could help establish the design requirements initiated earlier (\ref{DesignRequirements}), those being the multi-touch and the gyroscope.
-To be able to design a prototype with all the necessary aspects, control schemes and a base test level for navigation in 3D virtual environment have to be designed with the established design requirements \ref{DesignRequirements}.
+To be able to design a prototype with all the necessary aspects, control schemes and a base test level for navigation in 3D virtual environment have to be designed with the established design requirements (\ref{DesignRequirements}).
 The prototype has to implement two features to navigate in 3D virtual environment - the moving of the camera and the camera rotation. It was chosen to make extremities of the control schemes to establish familiarity in distinct ways. The familiarity concept will be put into effect as the control schemes for controlling the camera have to be linked with something that the user might be familiar with already. 
 
 \subsection{Interface Design}
-The currently existing sensors in mobiles enable the creation of unusual ways of controlling a 3d environment. With the goal in mind of achieving familiarity through the non-traditional sensors, two different approaches were established. The knowledge and familiarity to the currently existing products on the market (\ref{SOTA}), and the familiarity of movement representative to the one of movement in real life. For both approaches the current and the target knowledge \ref{knowledgeSpace}, points for the user are expected to be separate. The design needs to be established in a way to help the users get through the knowledge gap intuitively, when they are involved in the designed task. It was chosen to make extremities of the control schemes to establish familiarity in distinct ways. It was important to keep the same movement speed settings for all the control schemes for later evaluations. That meant that in the perfect scenario, the user should be able to get from one position to another with the same amount of time spent for that task on each of the control schemes.
+The currently existing sensors in mobiles enable the creation of unusual ways of controlling a 3d environment. With the goal in mind of achieving familiarity through the non-traditional sensors, two different approaches were established. The knowledge and familiarity to the currently existing products on the market (\ref{SOTA}), and the familiarity of movement representative to the one of movement in real life. For both approaches the current and the target knowledge (\ref{knowledgeSpace}), points for the user are expected to be separate. The design needs to be established in a way to help the users get through the knowledge gap intuitively, when they are involved in the designed task. It was chosen to make extremities of the control schemes to establish familiarity in distinct ways. It was important to keep the same movement speed settings for all the control schemes for later evaluations. That meant that in the perfect scenario, the user should be able to get from one position to another with the same amount of time spent for that task on each of the control schemes.
 
 \subsection{Control Schemes}
 Three distinct control schemes were designed for the navigation. Buttons-only, Joysticks-only, and one that includes buttons for moving back and forth, with a gyroscope for moving the camera. The fact that newer smart devices are capable of multi-touch input has been used as an advantage to enable both the movement and the rotation to be controlled simultaneously. That creates the possibility for the user to walk and turn around at the same time.
@@ -16,7 +16,7 @@ Three distinct control schemes were designed for the navigation. Buttons-only, J
 \subsubsection{Gyroscopic Controls}
 Establishing the gyroscopic sensor creates a possibility to interact in an unusual, but familiar way. It enables the prototype to be built around what is most familiar to the real life in movement - actual moving around in reality to navigate.
 Controlling the camera with a built-in gyroscope in the tablet is familiar with a natural way for a person to look around - by turning the direction user wishes to face. The movement forward and backwards was implemented with on-screen buttons as these were familiar to the target group through the usual human-computer interaction, since most of the controllers for movement are represented as such (e.g. arrows on the computer keyboard, music player, cell phone).
-Such control scheme, when supported by the flow theory \ref{FlowTheory} has the potential to be the most engaging one.
+Such control scheme, when supported by the flow theory (\ref{FlowTheory}) has the potential to be the most engaging one.
 
 \begin{figure}[H]
 \centering
@@ -36,7 +36,7 @@ Such control scheme, when supported by the flow theory \ref{FlowTheory} has the 
 
 
 \subsubsection{Joystick}
-In this prototype the user has to navigate using two joysticks - one for movement and one for camera movement/rotation. This should be easy to learn for the users that have experienced using a joystick before, and the target group is expected to have some knowledge as of how to a joystick is supposed to work, because of their popularity in arcade and electronic games, where joysticks are placed on game console’s remotes like Sony Playstation series or Microsoft Xbox. Additionally, even for users with no previous joystick controller experience, that should not be a problem, as the control scheme is supposed to borrow the same concept as moving a computer mouse on the screen in the direction that is same as the device movement itself - both use 2d directional movement.
+In this prototype the user has to navigate using two joysticks - one for movement and one for camera movement/rotation. This should be easy to learn for the users that have experienced using a joystick before, and the target group is expected to have some knowledge as of how a joystick is supposed to work, because of their popularity in arcade and electronic games, where joysticks are placed on game console’s remotes like Sony Playstation series or Microsoft Xbox. Additionally, even for users with no previous joystick controller experience, that should not be a problem, as the control scheme is supposed to borrow the same concept as moving a computer mouse on the screen in the direction that is same as the device movement itself - both use 2d directional movement.
 
 \begin{figure}[H]
 \centering
@@ -54,7 +54,6 @@ In this prototype the user has to navigate using two joysticks - one for movemen
 
 \subsubsection{On-screen Buttons}
 The way that should be the most familiar with the users through daily use - only buttons as the way to move both camera and the character. In this case camera would be moved only with arrow keys located on the screen and same for moving around - arrows indicating movement back and forth. This should be familiar with anyone that has used buttons for navigation of any sorts in virtual environment.
-By implementing familiarity concept to navigation, the problem of minimizing the knowledge gap is tangled so that the user is being trained in a way that seems natural.
 
 \begin{figure}[H]
 \centering
@@ -69,6 +68,10 @@ By implementing familiarity concept to navigation, the problem of minimizing the
   \captionof{figure}{Initial sketch of buttons 2}
 \end{minipage}
 \end{figure}
+
+
+By implementing familiarity concept to navigation, the problem of minimizing the knowledge gap is tangled so that the user is being trained in a way that seems natural.
+
 
 
 \subsection{Isolation}
