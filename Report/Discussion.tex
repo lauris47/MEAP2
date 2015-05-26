@@ -1,34 +1,69 @@
 \chapter{Discussion}
-The testing of this implementation, have a few points that should change, specifically four points have been identified that has had a negative impact on the test. these are:
+This first section of the discussion will focus on the evaluation chapter. Next the discussion will look into the main points that can be used to make the redesign better. The discussion will then look at some of the choices made along the way for which control schemes that were implemented and look at what alternatives there might exist. Finally the chapter will look into some of the technical difficulties that the Joystick control scheme experienced as well as look into what could have made the test level better suited for testing navigation.
+
+\section*{Test related discussion}
+The testing of this implementation, have a few points that should change, specifically three points have been identified that has had a negative impact on the test. these are:
+
 \begin{itemize}
 \item Test environment
 \item Tested users can be classified as gamers
 \item Competition
 \end{itemize}
-these first section of the discussion will focus on explaining and solving these problems. Next the discussion will look into the main points that can be used to make the redesign better. the discussion will then look at some of the choice made along the way for which control schemes that were implemented and look at what could be alternatives. Finally the discussion chapter will look into some of the technical difficulties that the Joystick control scheme experienced(more on that later) as well as look into what could have made the test level better suited for testing navigation.
 
+\subsection*{Test environment}
+During the testing of this prototype the environment was not taken into account as it was done in the team’s group room, this introduced some problems that should not have been present, for instance: two test participants were brought to test for the testing team, these were not separated during their individual tests and the testers were not told not to talk during the test. This might have affected their responses as well as their completion time. This could have been fixed by having the participants test the app in one room and do the card sorting in another. If the tests had been carried out in two rooms, one room could have held a one-way mirror where the testers could have observed the test participants from, and also filmed. this could have allowed for an in-depth analysis of the emotional responses from the participants. 
 
-\section{Test environment}  
-During the testing of this prototype the environment was not taken into account as it was done in the team's group room, this introduced some problems that should not have been present, for instance: two test participants were brought to test for the team, these were not separated during their individual tests and the testers were not told not to talk during the test. this might have affected their responses as well as their completion time. This could have been fixed by having the participants test the app in one room and do the card sorting in another. If the tests had been carried out in two rooms, one room could have held a one-way mirror where the testers could have observed the test participants from, and also filmed. this could have allowed for an in-depth analysis of the emotional responses from the participants. 
-Tested users are gamers
-An issue that was not taken into account before the test was carried out was the fact that many of our test participants were not only digital natives but gamers. This meant that our target group was not well represented. They may have had too many skills than we anticipated which may have affected some outcomes in the card sorting test e.g. that the buttons were boring, that they are used to using a joystick and have a smaller knowledge gap than the digital natives.
-
-\section{Anomalies in the test data}
-When looking at the data gathered from the tests, 2 test subjects stand out as anomalies. While the joystick is generally slower than the other 2 control schemes, there was one test participant who spent nearly twice as long as the second slowest test participant.
+\subsection*{tested users are gamers} \label{TestedUsersAreGamers}
+An issue that was not taken into account before the test was carried out was the fact that many of our test participants were not only digital natives but also gamers.\footnote{people  who play video games on any platform} This meant that our target group was not well represented. They may have had too many skills than we anticipated which may have affected some outcomes in the card sorting test. E.g. that the buttons were boring, that they are used to using a joystick and have a smaller knowledge gap than the digital natives, as the current knowledge point are significantly closer to the target knowledge point for gamers. 
+It should also be noted that while our test participants found the button controls most familiar, a digital immigrant who has no preconceptions about how navigation should work might find the gyroscopic controls which relates more to the real world easier to learn. This hypothesis is backed up by anecdotal evidence from when we showed the prototypes to older people. 
+\subsection*{Anomalies in the test data}
+When looking at the data gathered from the tests, the data of 2 test subjects stand out as anomalies. While the joystick is generally slower than the other 2 control schemes, there was one test participant who spent nearly twice as long as the second slowest test participant.
 The deviation from the norm in this test was so large that it single handedly increased the average time by close to 25\%.
 Another anomaly we noticed was on the gyroscope. One of our test participants ran into some technical issues during the test, to which we could attribute his overwhelmingly negative comments. This test participant accounted for 40\% of the gyroscopes negative comments.
-One must note that the first of these anomalies CAN be eliminated since it's part of our quantitative data, while the other can not since it's qualitative. Even though it accounts for 40\% of the negative comments relating to this control scheme
-\section{Competition}
-The test was designed as a competition in hopes of motivating the user to do their best i.e. as fast as they could. This worked well during the test, but it later showed that the test participants might have been too focused on the competition rather than the navigation. This could also be because they were not instructed properly before the card sorting. However, it did affect the card sorting results as we can see many chose cards like "fun" or "engaging" and reasoned it with the fact that it was fun because it was a competition. 
-We might still have been able to pull this off if we had given more clear instruction to what they should base the cards on. 
-\section{Test data to redesign}
-In order to test whether the button controls IS actually the most efficient, another test should be done where the test participant get a chance to play around with the controls before being timed. This should eliminate or at least reduce the knowledge gap, allowing the test to focus only on efficiency instead.
-While the joystick controls received mostly negative feedback there were some positive comments though, particularly on the fact that it allowed the user to move sideways instead of just back and forth. This feature is something that shall be brought into the next iteration.
+One must note that the first of these anomalies CAN be eliminated since it’s part of our quantitative data, while the other can not since it’s qualitative. Even though it accounts for 40\% of the negative comments relating to this control scheme.
+
+\section*{Competition}
+The test was designed as a competition in hopes of motivating the user to do their best ie. as fast as they could. This worked well during the test, but it later showed that the test participants might have been too focused on the competition rather than the navigation. This could also be because they were not instructed properly before the card sorting. However, it did affect the card sorting results as we can see many chose cards like “fun” or “engaging” and reasoned it with the fact that it was fun because it was a competition. 
+We quickly noticed a trend in this and made sure to instruct the subsequent test participants that the comments should be related to the control, and the controls only.
+We also chose to disregard the comments related to the test’s premises.
+
+\section*{Test data to redesign}
+In order to test whether the button controls ARE actually the most efficient, another test should be done where the test participant get a chance to play around with the controls before being timed. This should eliminate or at least reduce the time needed to learn the controls, allowing the test to focus only on efficiency instead.
+While the joystick controls received mostly negative feedback there were some positive comments though, particularly on the fact that it alone allowed the user to move sideways instead of just back and forth. This feature is something that shall be brought into the next iteration. That the users would like to be able to move sideways can relate to the fact talked about earlier, that a lot of the test participants are gamers as mentioned on page \ref{TestedUsersAreGamers}, in most games with a first person control scheme being able to move sideways is the standard. 
+
+\section*{Control schemes choices}
+Analysis of State of the Art (\ref{SOTA}) gave understanding which controls are most common and should be most familiar to users with digital knowledge.
+
+\subsection*{Limited Control Designs} 
+
+The control scheme designs were limited to 3 ones that were implemented, as they were the ones that initially seemed they could answer the minimizing of knowledge gap through familiarity. All three designs were based on familiarity either through the user's previous experience in navigation in 3d environment, or through what would seem familiar with a “natural” way of moving in real life, conveyed in an app.
+However, design alternatives should not be overlooked, as possible combinations of the initial control schemes could bring new interesting outcomes. There is a wide variety of possible alternative ways of controlling a 3d environment. In the Re-design section (\ref{Re-Design}) possible alternative control designs will be mentioned.
 
 
-\section{Control schemes choices}
-\section{Technical Difficulties - choices and preparation} 
-When looking at the results for the joysticks it's obvious that these were the least popular
-However, there were a lot of complaints about technical issues with the joystick controls, which means it might be necessary to calibrate it and test it in the second iteration as well. 
-\section{Level design - obstacles are lower than the camera height}
-This resulted in collision issues which added to the times. However this was an issue for every control scheme so it's not something that should be eliminated from the test results, it's still an unnecessary annoyance which should be removed from the next iteration.
+\subsection*{Joystick - not calibrated nor adaptive}
+Testing showed that there is one main problem with the joystick controls implementation. Graphically the joystick is displayed in the center of its boundaries that are represented as a white circle, but it was implemented as though the actual center is in the corner of the joystick’s boundaries. Additionally, some of the users were focusing on the task rather than the controls. Current state of the joystick controls works only when the fingertip is placed in the center and dragged from the center, however some of the users placed the finger on the side of the control field assuming that camera will still turn. There are different approaches in solving this problem, and few of them will be discussed in the re-design chapter (\ref{Re-Design}). 
+
+\subsection*{Gyroscopic approach and the alternatives}
+When designing the gyroscopic control scheme, different approaches were discussed. The approach taken was to eliminate all the navigation from screen that could be done in an alternative way (by moving the device). This control scheme was the one with least amount of navigation that required design elements on the screen, instead the rotation of the camera had taken a completely different approach. This approach has led the project in an interesting direction - only from rough general observation it could be seen that the users were engaged in this way of navigating in the 3d environment.
+However, some issues should not be overlooked. As much as this control scheme could be a working approach to navigate in virtual space, some general things have to be considered. For instance - moving around for longer periods of time, or environments not optimal for moving around (e.g. sitting). Although the test participants did not point that out (a reason could be test was shorter than a scenario where this control scheme was implemented into an app), it may be an issue in the future, when the problem area expands.
+Alternatively, an additional version of a control scheme that uses the gyroscope sensor could go into the next iterations is discussed in section \ref{Re-Design}.
+
+
+\subsection*{Consideration to alternative control schemes}
+To further emphasize on the familiarity that this project is aiming for, additional alternative control designs could be considered that aim to convey familiarity to the one that represents real life, or the navigation controlling in a virtual environment that the user has engaged with before.
+
+When it comes to intuitivity and familiarity, the research in the field of navigating in virtual environment is limited, therefore general guidelines for navigation in such environment are hard to come by. When it came down to designing different control schemes, the ones created seemed like obvious choices, as they fit the current knowledge point that was aimed within the target group. To create a deeper approach on how the new alternative control schemes should be initiated, there is a need of a better definition of what characteristics the control scheme has to contain to be defined as familiar to the person. This could be done by further analysis of the target group and how they interact with different control schemes.
+
+\section*{Technical Difficulties}
+When the team decided on implementing the three control schemes there was no real way of estimating how difficult implementing each control scheme would be. This meant that for the prototypes to be ready for testing, the implementation was not planned as rigidly as it could have, this lead to the joystick having more technical difficulties than the other two control schemes. Furthermore the joystick implementation is composed of both the teams own assets and some of the standard assets provided from Unity, this means that for the team to be able to modify the code, the provided code from unity had to be analysed and understood. This difficulty has caused some negative test results for the joystick as mentioned in the evaluation chapter (\ref{joystickEvaluationResults}). 
+
+\section*{3D Level design}
+The test level was effective and helped to make tests with useful results. However there was one small aspect that needs addressing. Plan was that participants would go through the level as fast as possible. However, level was designed for further possible design iteration, where each improved controls scheme would be tested for how efficient it is to walk sideways and focus on one point, and other test goals mentioned in \ref {Design of 3D testing area}. This affected very small amount of test participants, even if they were told to ignore the text and other signs, and just go through the test as fast as possible. 
+
+Other aspect that caused discussion was that some users had a problem with hitting the obstacle and loosing some time with every control scheme. However, that is because of each scheme had it’s own little disadvantages implementation wise that caused inaccurate user’s movement. 
+This might cause some negative feedback in card- sorting mentioned in evaluation. However this does not affect comparison between different schemes, since all the controls were calibrated to match each other - speed-wise and how much of 3D area they require. 
+
+\section*{Iterative design process}
+The process that was used for this project was focused on information gathering and creating a product based on this information.
+Instead of focusing all the effort on finding research the design process could have been done more user centered.
+This would mean creating low-fi prototypes and doing quick and dirty testing from the beginning. This would allow us to go through several iterations where we heighten the fidelity and eliminate errors while the focus of the project is being narrowed down with each iteration. Doing several iterations would have allowed us to catch technical issues like what we had with the joystick controls early on in the process, allowing for several tests with a decreasing amount of error
