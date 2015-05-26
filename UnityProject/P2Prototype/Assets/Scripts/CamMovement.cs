@@ -32,9 +32,7 @@ public class CamMovement : MonoBehaviour {
 
     public void rotateLeftRight(bool right) {
         int rotateRight = right ? -1 : 1;
-        Quaternion target = Quaternion.Euler(transform.rotation.eulerAngles.x ,
-                                             transform.rotation.eulerAngles.y + 2 * rotationSpeed * rotateRight,
-                                             0);
+        Quaternion target = Quaternion.Euler(transform.rotation.eulerAngles.x , transform.rotation.eulerAngles.y + 2 * rotationSpeed * rotateRight, 0);
         transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
 
     }
