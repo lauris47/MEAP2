@@ -1,4 +1,3 @@
-
 \documentclass[a4paper,12pt]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -81,11 +80,16 @@ CHANGE THIS BEFORE HANDIN}
 % Fancyheader : http://mirrors.dotsrc.org/ctan/macros/latex/contrib/fancyhdr/fancyhdr.pdf
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\fancyhf{}
+%\fancyhf{}
+\fancyfoot{}
 %\fancyhead[RO]{\docauthor \hfill \doctitle \hfill\thepage}
-\fancyhead[RO]{ \doctitle \hfill   \thepage }
+%\fancyhead[RO]{ \doctitle \hfill   \thepage }
+%\rfoot{\doctitle \hfill   \thepage}
+%\fancyhead[CO,CE]{---Draft---}
+%\fancyfoot[LF]{Confidential}
+\fancyfoot[RO, LE] {\thepage}
 % Get rid of annoying error messages
-\setlength{\headheight}{14.5pt}
+%\setlength{\headheight}{14.5pt}
 \usepackage{totpages}
 \usepackage{sectsty}
 \allsectionsfont{\scshape}
