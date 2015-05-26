@@ -16,6 +16,12 @@ Ciotti, G. (2013).
 \newblock The psychology of colour in marketing and branding.
 \newblock \url{ http://www.helpscout.net/blog/psychology-of-color/ }.
 
+\bibitem[Csikszentmihalyi, 2005]{Flow}
+Csikszentmihalyi, J. N. .~M. (2005).
+\newblock The concept of flow.
+\newblock
+  \url{http://myweb.stedwards.edu/michaelo/2349/paper1/ConceptOfFlow.pdf}.
+
 \bibitem[Developers, ]{AndroidDevelopers}
 Developers, A.
 \newblock Motion sensors.
@@ -43,12 +49,6 @@ Gube, J. (2010).
 \newblock Smashing Magazine.
 \newblock
   \url{http://www.smashingmagazine.com/2010/10/05/what-is-user-experience-design-overview-tools-and-resources/}.
-
-\bibitem[Neil, 2014]{Pattern}
-Neil, T. (2014).
-\newblock {\em Mobile Design Pattern Gallery}.
-\newblock O'Reilly Media, Inc., 2nd edition.
-\newblock ISBN:8349857349687.
 
 \bibitem[Nielsen, 2012]{usability}
 Nielsen, J. (2012).
