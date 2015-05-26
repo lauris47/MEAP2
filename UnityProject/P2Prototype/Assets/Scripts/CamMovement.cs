@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(CharacterController))]
+
 public class CamMovement : MonoBehaviour {
     public float moveSpeed = 5f;
     public bool IsMoving { get; set; }

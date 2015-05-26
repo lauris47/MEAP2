@@ -286,10 +286,6 @@ Prefab:
       propertyPath: m_Center.y
       value: -1.87
       objectReference: {fileID: 0}
-    - target: {fileID: 11491588, guid: f0081d3165d7ce04ea2bc0fa5d624f19, type: 2}
-      propertyPath: gyroEnabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0081d3165d7ce04ea2bc0fa5d624f19, type: 2}
   m_IsPrefabParent: 0
