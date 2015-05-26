@@ -12,11 +12,11 @@ The implemented prototypes are all made with a focus on speed and easy to debug,
 This would be a more rigid approach to developing these prototypes this controller would then be accessible through interfaces.
 
 \item Make the joysticks reflective of the fingers position on the screen\\
-this problem is addressed in the discussion chapter on page \pageref{DISJoystick}. 
+this problem is addressed in chapter \ref{DiscussionJoystick}. 
 
 
 \item Refine placement of UI elements\\ 
-This improvement is aimed at reducing the amount of fat-finger problems (see page \pageref{FatFP}) that especially the buttons scheme might be prone to. While refining the placement is a simple thing it is however something that is usually done best in an iterative manner, as the users are the ones to decide where it is most effective to have them on the screen.
+This improvement is aimed at reducing the amount of fat-finger problems (see section \ref{MobileUsability}) that especially the buttons scheme might be prone to. While refining the placement is a simple thing it is however something that is usually done best in an iterative manner, as the users are the ones to decide where it is most effective to have them on the screen.
 \end{itemize}
 
 \subsection{Control schemes additions}
@@ -28,23 +28,23 @@ The following items should be added to the existing prototypes, based on the use
 
 \item According to the user’s feedback, the ability to move sideways should be added to the control schemes of all further prototypes. Based on the feedback this should improve efficiency of navigation.
 \end{itemize}
- \subsubsection{Joystick control scheme}
-The joystick could implement adaptive placement - meaning that the joystick center is placed wherever the finger is initially placed on the screen. When the finger is taken off the screen, a new position can be initiated. (see fig. \ref{fig:RedesignAdaptive.png}).
+ \subsubsection{Joystick control scheme}\label{RedesignJoystick}
+The joystick could implement adaptive placement - meaning that the joystick center is placed wherever the finger is initially placed on the screen. When the finger is taken off the screen, a new position can be initiated. (see fig. \ref{RedesignAdaptive}).
 
-This would ensure that the users could concentrate more on the task for a better experience. This eliminates the need to focus on fixed finger placement on the screen. \ref{RedesignAdaptive}. 
+This would ensure that the users could concentrate more on the task for a better experience. This eliminates the need to focus on fixed finger placement on the screen.
 
 \begin{figure} [H]
 \centering
 \includegraphics [scale = 0.5] {RedesignAdaptive.png}
 \caption {Example of real-world familiarity regarding the accelerometer}
-\label {RedesignApadtive}
+\label {RedesignAdaptive}
 \end {figure}
 
 \subsection{Control schemes improvements}
 User-centered designed will be introduced in second iteration. Users will be asked to visualize, how do they imagine specific buttons as walking forward or backwards. This will be taken into consideration while redesigning initial button graphics.
 
 
-\subsection{further prototypes}
+\subsection{further prototypes}\label{RedesignNewDesigns}
 For the following iterations these additional prototypes will be added.
 \subsubsection{Mirrored Versions}
 A mirrored version of the button control scheme and the joystick control scheme.
@@ -59,7 +59,7 @@ The users would use the device as a steering wheel as when driving a car. As sho
 \label {RedesignAccelerometer}
 \end {figure}
 
-\subsubsection{Joystick and gyroscope fusion}
+\subsubsection{Joystick and gyroscope fusion}\label{RedesignJoyGyro}
 While observing the test participants interact with the joystick control scheme, it seemed the movement of the joystick was the most prefered part of it. However The test participants did not enjoy the camera rotation for this layout. While the most prefered camera rotation controls seemed to be the gyroscope.
 Combining the movement from the joystick with the camera rotation from the gyroscope could shape a more enjoyable control scheme. In addition this would also allow the user to control everything with a single hand.
 
