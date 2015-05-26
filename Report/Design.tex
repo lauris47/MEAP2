@@ -3,7 +3,7 @@
 In this chapter, the design of the prototype and its graphical decisions will be discussed and defined, with the requirements set in the analysis, which were further defined in the design requirements section (\ref{DesignRequirements}). When designing, different aspects will be taken into consideration for user experience - usability goals and principles (\ref{sec:UsabilityGoals}), mobile usability (\ref{MobileUsability}), establishing intuitivity through familiarity, as well as the technical side on which the user experience also depends - fluent implementation of the graphical user interface and non-traditional sensors, while also ensuring that the system performance is smooth. In further design iterations users would be involved in the design process (\ref{UserCenteredDesign}), as user centered design is one of the elements to designing a good user experience (\ref{fig:UserCenteredDesign}).
 
 \subsection{Concept}
-The goal of the prototype is to help in answering which control scheme may be the best solution for the most familiar and effective navigation in 3d environment. Designing a prototype that creates a familiar and effective navigation that is not traditional can go in various directions, but the concept was narrowed down to using just the sensors that could help establish the design requirements initiated earlier (\ref{DesignRequirements}), those being the multi-touch and the gyroscope.
+The goal of the prototype is to help in answering which control scheme characteristics are most familiar and effective for navigation in 3d environment. Designing a prototype that creates a familiar and effective navigation that is not traditional can go in various directions, but the concept was narrowed down to using just the sensors that could help establish the design requirements initiated earlier (\ref{DesignRequirements}), those being the multi-touch and the gyroscope.
 To be able to design a prototype with all the necessary aspects, control schemes and a base test level for navigation in 3D virtual environment have to be designed with the established design requirements (\ref{DesignRequirements}).
 The prototype has to implement two features to navigate in 3D virtual environment - the moving of the camera and the camera rotation. It was chosen to make extremities of the control schemes to establish familiarity in distinct ways. The familiarity concept will be put into effect as the control schemes for controlling the camera have to be linked with something that the user might be familiar with already. 
 
@@ -11,7 +11,14 @@ The prototype has to implement two features to navigate in 3D virtual environmen
 The currently existing sensors in mobiles enable the creation of unusual ways of controlling a 3d environment. With the goal in mind of achieving familiarity through the non-traditional sensors, two different approaches were established. The knowledge and familiarity to the currently existing products on the market (\ref{SOTA}), and the familiarity of movement representative to the one of movement in real life. For both approaches the current and the target knowledge (\ref{knowledgeSpace}), points for the user are expected to be separate. The design needs to be established in a way to help the users get through the knowledge gap intuitively, when they are involved in the designed task. It was chosen to make extremities of the control schemes to establish familiarity in distinct ways. It was important to keep the same movement speed settings for all the control schemes for later evaluations. That meant that in the perfect scenario, the user should be able to get from one position to another with the same amount of time spent for that task on each of the control schemes.
 
 \subsection{Control Schemes}
-Three distinct control schemes were designed for the navigation. Buttons-only, Joysticks-only, and one that includes buttons for moving back and forth, with a gyroscope for moving the camera. The fact that newer smart devices are capable of multi-touch input has been used as an advantage to enable both the movement and the rotation to be controlled simultaneously. That creates the possibility for the user to walk and turn around at the same time.
+Three distinct control schemes were designed for the navigation (see fig. \ref{fig:ControlSchemes}). Buttons-only (1), Joysticks-only (2), and one that includes buttons for moving back and forth, with a gyroscope for moving the camera (3). The fact that newer smart devices are capable of multi-touch input has been used as an advantage to enable both the movement and the rotation to be controlled simultaneously. That creates the possibility for the user to walk and turn around at the same time.
+
+\begin{figure}[H]
+\label{fig:ControlSchemes}
+\centering
+  \includegraphics[width=.9\linewidth]{ControlSchemes.png}
+  \captionof{figure}{Control Schemes}
+\end{figure}
 
 \subsubsection{Gyroscopic Controls}
 Establishing the gyroscopic sensor creates a possibility to interact in an unusual, but familiar way. It enables the prototype to be built around what is most familiar to the real life in movement - actual moving around in reality to navigate.
@@ -129,7 +136,12 @@ Analysing SOTA’s applications gave understanding what important aspects of nav
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{3D_dev_5.jpg}
-\caption{Last level of testing area. This level is to test how well user can walk while looking down and sideways}
+\caption{Last level of testing area. This level is to test how well the user can walk while looking down and sideways}
 \label{TestLevel5}
 \end{figure}
 \end{enumerate} 
+
+\subsection{Design Conclusion}
+Three distinct prototypes and a test level were designed for navigation in 3d environment with all the initial design requirements in mind, with a goal to create a design that reduces the knowledge gap for the user the most. These control scheme design initial prototypes will be implemented as three seperate mobile applications for tablets and smartphones with gyroscopic sensor for initial prototype testing. Designs will then be evaluated to help in the iterative design process.
+In addition to that, since these are not the only possible control schemes that the problem area covers, alternative prototype design possibilities will be discussed in the discussion and redesign chapters in the report. 
+
