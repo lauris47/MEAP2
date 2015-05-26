@@ -81,15 +81,15 @@ CHANGE THIS BEFORE HANDIN}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 %\fancyhf{}
+\fancyhead{}
 \fancyfoot{}
 %\fancyhead[RO]{\docauthor \hfill \doctitle \hfill\thepage}
 %\fancyhead[RO]{ \doctitle \hfill   \thepage }
-%\rfoot{\doctitle \hfill   \thepage}
-%\fancyhead[CO,CE]{---Draft---}
-%\fancyfoot[LF]{Confidential}
-\fancyfoot[RO, LE] {\thepage}
+\fancyhead[LE,LO]{ \slshape\nouppercase{\rightmark}}
+\fancyhead[RE,RO]{ \slshape\nouppercase{\leftmark }}
+\fancyfoot[CE,CO] {\vspace{15 mm} \thepage}
 % Get rid of annoying error messages
-%\setlength{\headheight}{14.5pt}
+\setlength{\headheight}{14.5pt}
 \usepackage{totpages}
 \usepackage{sectsty}
 \allsectionsfont{\scshape}
