@@ -63,9 +63,14 @@ Nielsen, J. (2012).
 \newblock
   \url{http://www.nngroup.com/articles/usability-101-introduction-to-usability/}.
 
-\bibitem[Norman, 1988]{Normans}
-Norman, D. (1988).
+\bibitem[Norman, 1988a]{Normans}
+Norman, D. (1988a).
 \newblock {\em The Design of Everyday Things}.
+\newblock DOUBLEDAY.
+
+\bibitem[Norman, 1988b]{Affordance}
+Norman, D. (1988b).
+\newblock {\em The Psychology of Everyday Things}.
 \newblock DOUBLEDAY.
 
 \bibitem[Preece et~al., 2015]{Wileys}
