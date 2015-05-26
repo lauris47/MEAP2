@@ -25,12 +25,15 @@ Global
 	EndGlobalSection
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 																																																										GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> parent of b6873da... Small simplifications
 =======
 																																																											GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> parent of 19388a9... Revert "Cleaned up some code"
+=======
+>>>>>>> parent of fc71394... Revert "Small simplifications"
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
