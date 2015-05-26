@@ -1,24 +1,27 @@
 \chapter{Implementation}
-%This chapter will describe how the implementation for the evaluation has been made. first lets take a look at what has to be implemented and why.
-%\begin{itemize}
-%\item Test Level\\
-%this is the 3D environment that will be used to test the different control schemes. 
-%\item Gyroscopic controls\\
-%The control scheme that will use the gyroscope found in many mobile devices, what the gyroscope will be used for is to make it seem natural to turn around when looking in a virtual 3D space environment. 
-%\item Joystick controls\\
-%this control scheme is composed of two joystick like buttons, that respond to being dragged, one joystick will control the camera movement and the other the orientation of the camera. The idea is that this control scheme will seem familiar%reference to UX section
-%to users because the common place console controller uses the same kind of dragable joystick.
-%\item Standard button controls\\
-%Because the previously described control schemes uses concepts that might not be immediately familiar to all users, this standard button control scheme was designed to see if users who are not familiar with joysticks and using their body movements, would perform better with a control scheme made out of buttons, all the buttons are able to trigger when being held down.
-%\end{itemize}
-%these four things are what is needed in the projects implementation. To implement this what is needed is some sort of framework for working within a 3D environment, there are two ways to go about this, either build such a framework from scratch or use one of the many game engines available. Since developing a fully fletched 3d engine is beyond the scope of this project, the choice fell on developing from within an available 3D engine
+this chapter will be a thorough explanation of the implementation of the prototype.
+As described in the design chapter the following are what will be implemented:
+\begin{itemize}
+\item 3D level
+\item 3 control schemes:
+		\begin{itemize}
+		\item Joystick Controller
+		\item Buttons Controller
+		\item Gyroscopic controller 
+		\end{itemize}
+\item a script that will enable all the controllers to work with buttons
+\end{itemize}
 
-\subsection{Development of 3D elements}
-Actual implementation consisted of creating level areas, 3D prefabs - cones and poles with string, sprites - notes and arrows. 3D elements were created using software "Maya" and textures with "Photoshop". Each level started by simple creation of a square representing a room. Then considerations of what test it will include were done and assets that were created were placed making different challenges. Picture \ref{3dDevelopment1} shows 3D cone and it's texture.
+%these four things are what is needed in the projects implementation. To implement this what is needed is some sort of framework for working within a 3D environment, there are two ways to go about this, either build such a framework from scratch or use one of the many game engines available. Since developing a fully fletched 3d engine is beyond the scope of this project, the choice fell on developing from within an available 3D engine
+\section{Unity Introduction}
+For this implementation the choice was made to use the freely available Unity3D engine, this was chosen as Unity provides a lot of features that would otherwise mean that this project would not be possible to complete in the amount of time given. This section will provide a quick glance at what Unity is and introduce some common terms used within Unity. Everything that is seen in a Unity game is composed of {\tt GameObjects} these objects are what the scripts described in the following sections will be attached to. A newly created {\tt GameObject} will only contain what is known as a {\tt Transform} the transform is an object that holds the information about where the object is within the 3D space. It also holds the objects rotational information  and its scale.
+the position of the object is expressed as a vector, a vector is a mathematical tool for representing a coordinate in space. As such vectors are the primarily tool that is used in unity for expressing things like velocity, position, forces etc.
+\section{Development of 3D elements}
+Actual implementation consisted of creating level areas, 3D prefabs - cones and poles with string, sprites - notes and arrows. 3D elements were created using software "Maya", which is a 3D modeling and animation programme. and textures with "Photoshop". Each level started by simple creation of a square representing a room. Then considerations of what test it will include were done and assets that were created were placed making different challenges. Picture \ref{3dDevelopment1} shows 3D cone and it's texture.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.35]{3D_dev_7.jpg}
-\caption{Picture of a cone from testing level}
+\caption{Picture of a cone from the testing level}
 \label {3dDevelopment1}
 \end{figure}
 Every object that required texturing, also needed its own UV map. UV map is 3 dimensional model representation in 2 dimensions - it helps to see and paint texture using tools as Photoshop. Following picture shows UV map as red lines, that helps to see the boundaries for the texturing in Photoshop \ref{3dDevelopment2}.
@@ -36,10 +39,8 @@ Text, directional arrows, and other symbols needed to be transparent so it would
 \label {3dDevelopment3}
 \end{figure}
 Since graphics and aesthetics were not focus of this test level, textures were created very minimalistic - without any shadowing, noise, imitation of being old or used etc. It also helped to make test very optimized in hardware performance, since textures size on disk were as little as few kilobytes.
-\subsection{Unity Introduction}
-For this implementation the choice was made to use the freely available Unity3D engine, this was chosen as Unity provides a lot of features that would otherwise mean that this project would not be possible to complete in the amount of time given. This section will provide a quick glance at what Unity is and introduce some common terms used within Unity. Everything that is seen in a Unity game is composed of {\tt GameObjects} these objects are what the scripts described in the following sections will be attached to. A newly created {\tt GameObject} will only contain what is known as a {\tt Transform} the transform is an object that holds the information about where the object is within the 3D space. It also holds the objects rotational information  and its scale.
-the position of the object is expressed as a vector, a vector is a mathematical tool for representing a coordinate in space. As such vectors are the primarily tool that is used in unity for expressing things like velocity, position, forces etc.
-\subsection{Buttons}
+
+\section{Buttons}
 The buttons used in all three schemes are all created using unity's UI system. A button in the UI system is just a empty {\tt GameObject} that holds the following components:
 \begin{itemize}
 \item {\tt Rect Transform}\\
@@ -50,9 +51,9 @@ this is the standard script that unity uses to detect clicks on a button and can
 this component is a component that will draw an image on the canvas this image will be the full size of the button
 \item 
 \end{itemize}
-\subsubsection{{\tt ButtonScript}}
+\subsection{{\tt ButtonScript}}
 {\tt ButtonScript} inherits from the in-built Unity {\tt Button} object. This is done so that the script can access the method {\tt   protected bool IsPressed()}. This script is the script that all buttons in both the buttons and gyro scene uses. it is a simple extension as all it has to do is check if the button is being pressed, and if it is then check which button it is and act accordingly. 
-\subsection{Buttons Scene}
+\section{Buttons Scene}
 the button scene is the only scene that only uses  {\tt CamMovement} and {\tt ButtonScript} and as such is the simplest scene technically. Presented below is  the methods contained within {\tt camMovement}: 
 \begin{itemize}
 \item {\tt public void move(bool rightButton)}\\
@@ -82,7 +83,7 @@ this function is a simple function to make all movement on the camera stop, it w
 \end{itemize}
 
 
-\subsection{Gyroscope Camera}
+\section{Gyroscope Camera}
 the gyroscopic camera uses two scripts to work, first and most importantly the {\tt GyroController} which is the script responsible for getting the input from the gyroscope and 
 rotating accordingly. Unity can take input from the gyroscope directly, but if an object is rotated by the raw data from the gyroscope there will immediately be a problem as the coordinate system that is used to by gyroscope is a right-handed coordinate system 
 \begin{figure}[H]
@@ -92,16 +93,16 @@ rotating accordingly. Unity can take input from the gyroscope directly, but if a
 \end{figure}
 where unity uses a left hand coordinate system. To have the coordinates given by the gyroscope match the coordinates of Unity the {\tt GyroController} has a method for converting from right-handed to left-handed coordinate systems this method uses Quaternions which is how Unity handles rotation internally explaining quaternions is beyond the scope of this project\label{quaternions}
 besides the {\tt GyroController}, this scene also uses the {\tt CamMovement} and {\tt ButtonScript} explained in the previous section, however in this scene only the forward and backward buttons are used, as the gyro is handling rotation of the camera.
-\subsection{Joystick Scene} 
+\section{Joystick Scene} 
 The joystick scene is technically the most difficult as this involves 
 The joystick scene uses some of Unitys standard assets, these include:
-\subsubsection*{Mobile Joystick}
+\subsection*{Mobile Joystick}
 The mobile joystick script creates two axis for unity's input manager. These two axis are then accessed by the first person controller and use these values to move camera. 
 
 
-\subsubsection*{The Character controller}
+\subsection*{The Character controller}
 this is actually a fully fleshed component, along with components like the transform, renderer etc. For this scene it is primarily used to generate a collider for the camera. 
-\subsubsection*{First Person Controller}
+\subsection*{First Person Controller}
 Unity provides a standard first person controller that comes with a whole range of features. For this scene the FPS controller needs to take input from the joysticks, to do this the FPS controller's {\tt RotateView()} method has been modified to take input from the virtual axis created by the mobile joystick:
 \begin{figure}[H]
 \centering
