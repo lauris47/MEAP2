@@ -1,13 +1,13 @@
 \chapter{Implementation}
 This chapter will be a thorough explanation of the implementation of the prototype.
-As described in the design chapter the following are what will be implemented:
+As described in the design chapter the following is what will be implemented:
 \begin{itemize}
 \item 3D level
 \item 3 control schemes:
 		\begin{itemize}
 		\item Joystick Controller
 		\item Buttons Controller
-		\item Gyroscopic controller 
+		\item Gyroscopic Controller 
 		\end{itemize}
 \item A script that will enable all the controllers to work with buttons.
 \end{itemize}
@@ -16,7 +16,7 @@ As described in the design chapter the following are what will be implemented:
 For this implementation the choice was made to use the freely available Unity3D engine. This was chosen as Unity provides a lot of features that would otherwise mean that this project would not be possible to complete in the amount of time given. This section will provide a quick glance at what Unity is and introduce some common terms used within Unity. Everything that is seen in a Unity game is composed of {\tt GameObjects}. These objects are what the scripts described in the following sections will be attached to. A newly created {\tt GameObject} will only contain what is known as a {\tt Transform}. The transform is an object that holds the information about where the object is within the 3D space. It also holds the objects rotational information  and its scale.
 The position of the object is expressed as a vector. A vector is a mathematical tool for representing a coordinate in space. As such, vectors are the primary tool that is used in unity for expressing things like velocity, position, forces etc.
 \section{Development of 3D elements}
-The actual implementation consisted of creating level areas, 3D prefabs; cones, poles with string, sprites, notes and arrows. 3D elements were created using the software "Maya", which is a 3D modeling and animation programme. Textures were made with "Photoshop". Each level started by a simple creation of a square representing a room. Then considerations of what the test should include were done and assets were placed to making different challenges. Picture \ref{3dDevelopment1} shows a 3D cone and its texture.
+The actual implementation consisted of creating level areas, 3D prefabs; cones, poles with string, sprites, notes and arrows. 3D elements were created using the software "Maya", which is a 3D modelling and animation programme. Textures were made with "Photoshop". Each level started by a simple creation of a square representing a room. Then considerations of what the test should include were done and assets were placed to make different challenges. Picture \ref{3dDevelopment1} shows a 3D cone and its texture.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.35]{3D_dev_7.jpg}
