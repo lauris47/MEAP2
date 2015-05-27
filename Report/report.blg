@@ -1,5 +1,15 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: report.aux
 A level-1 auxiliary file: Intro.aux
+Case mismatch error between cite keys Usability and usability
+---line 204 of file report.aux
+ : \citation{Usability
+ :                    }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys CardSorting and cardSorting
+---line 211 of file report.aux
+ : \citation{CardSorting
+ :                      }
+I'm skipping whatever remains of this command
 The style file: apalike.bst
 Database file #1: LiteratureList.bib
 I was expecting a `,' or a `}'---line 107 of file LiteratureList.bib
@@ -12,7 +22,11 @@ I was expecting a `,' or a `}'---line 140 of file LiteratureList.bib
  : author = "Jakob Nielsen",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Colour"
+Repeated entry---line 146 of file LiteratureList.bib
+ : @misc{CardSorting
+ :                  ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Spool"
 Warning--to sort, need author or key in performance
 Warning--to sort, need author or key in cards
 Warning--to sort, need author or key in cardSorting
@@ -21,5 +35,4 @@ Warning--empty year in cards
 Warning--empty year in performance
 Warning--empty year in AndroidDevelopers
 Warning--empty year in Greenfield
-Warning--empty journal in Sardo
-(There were 2 error messages)
+(There were 5 error messages)
