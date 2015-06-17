@@ -60,7 +60,7 @@ namespace UnityStandardAssets.CrossPlatformInput {
 
         public void OnDrag(PointerEventData data) {
             Vector3 newPos = Vector3.zero;
-
+            Debug.Log("drag position: " + data.position.ToString());
             if (m_UseX) {
                 int delta = (int)(data.position.x - m_StartPos.x);
                 newPos.x = delta;
@@ -81,8 +81,7 @@ namespace UnityStandardAssets.CrossPlatformInput {
         }
 
 
-        public void OnPointerDown(PointerEventData data) { 
-        
+        public void OnPointerDown(PointerEventData data) {
         }
 
         void OnDisable() {

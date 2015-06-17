@@ -23,15 +23,10 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-																																																											GlobalSection(MonoDevelopProperties) = preSolution
+																																																																GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> parent of b6873da... Small simplifications
 =======
-																																																												GlobalSection(MonoDevelopProperties) = preSolution
+																																																											GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> parent of 19388a9... Revert "Cleaned up some code"
 =======
 >>>>>>> parent of fc71394... Revert "Small simplifications"
